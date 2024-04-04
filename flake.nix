@@ -1,9 +1,10 @@
 {
     description = "My NixOS Flake";
 
-    outputs = inputs@{
-        self, nixpkgs, nixpkgs-stable, emacs-pin-nixpkgs, kdenlive-pin-pkgs, home-manager, nix-doom-emacs, nix-straight, stylix, blocklist-host, hyprland-plugins, rust-overlay, org-nursery, org-yaap, org-side-tree, org-timeblock, org-krita, phscroll, mini-frame, ...
-    };
+    outputs = inputs@{ self, nixpkgs, nixpkgs-stable, emacs-pin-nixpkgs,
+                     kdenlive-pin-nixpkgs, home-manager, nix-doom-emacs, nix-straight, stylix,
+                     blocklist-hosts, hyprland-plugins, rust-overlay, org-nursery, org-yaap,
+                     org-side-tree, org-timeblock, org-krita, phscroll, mini-frame, ... }:
 
     let
     # ---- SYSTEM SETTINGS ---- #
@@ -231,4 +232,4 @@
             flake = false;
         };
     };
-};
+}
