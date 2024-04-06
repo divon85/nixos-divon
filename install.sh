@@ -1,3 +1,5 @@
+#!/bin/sh
+
 # Generate hardware config for new system
 sudo nixos-generate-config --show-hardware-config > ~/.dotfiles/system/hardware-configuration.nix
 

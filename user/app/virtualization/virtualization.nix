@@ -10,7 +10,7 @@
     uefi-run
     lxc
     swtpm
-    bottles
+    # bottles
 
     # Filesystems
     dosfstools
