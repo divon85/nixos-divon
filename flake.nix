@@ -4,8 +4,10 @@
     inputs = {
         nixpkgs.url = "nixpkgs/nixos-23.11";
 
-        home-manager.url = "github:nix-community/home-manager/master";
-        home-manager.inputs.nixpkgs.follows = "nixpkgs";
+        home-manager = {
+            url = "github:nix-community/home-manager/master";
+            inputs.nixpkgs.follows = "nixpkgs";
+        };
 
         stylix.url = "github:danth/stylix";
 
