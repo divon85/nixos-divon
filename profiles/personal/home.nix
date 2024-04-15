@@ -18,12 +18,13 @@
     # Core
     zsh
     alacritty
-    librewolf
-    brave
     dmenu
     rofi
     git
     syncthing
+
+    # Editor
+    vscode
 
     # Media
     tuxpaint

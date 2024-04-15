@@ -1,4 +1,4 @@
-{ config, pkgs, pkgs-kdenlive, nix-doom-emacs, stylix, userSettings, ... }:
+{ config, pkgs, stylix, userSettings, ... }:
 
 {
     # Home Manager needs a bit of information about you and the paths it should
@@ -9,16 +9,15 @@
     programs.home-manager.enable = true;
 
     imports = [
-        (if ((userSettings.editor == "emacs") || (userSettings.editor == "emacsclient")) then nix-doom-emacs.hmModule else null)
         stylix.homeManagerModules.stylix
         (./. + "../../../user/wm"+("/"+userSettings.wm+"/"+userSettings.wm)+".nix") # My window manager selected from flake
         ../../user/shell/sh.nix # My zsh and bash config
         ../../user/shell/cli-collection.nix # Useful CLI apps
         ../../user/bin/phoenix.nix # My nix command wrapper
-        ../../user/app/doom-emacs/doom.nix # My doom emacs config
+        # ../../user/app/doom-emacs/doom.nix # My doom emacs config
         ../../user/app/ranger/ranger.nix # My ranger file manager config
-        ../../user/app/git/git.nix # My git config
-        ../../user/app/keepass/keepass.nix # My password manager
+        # ../../user/app/git/git.nix # My git config
+        # ../../user/app/keepass/keepass.nix # My password manager
         (./. + "../../../user/app/browser"+("/"+userSettings.browser)+".nix") # My default browser selected from flake
         # ../../user/app/virtualization/virtualization.nix # Virtual machines
         #../../user/app/flatpak/flatpak.nix # Flatpaks
@@ -35,19 +34,19 @@
         # Core
         zsh
         alacritty
-        librewolf
         brave
-        qutebrowser
         dmenu
         rofi
         git
         syncthing
+        neovim
+        wlogout
 
         # Office
         # libreoffice-fresh
         # mate.atril
         # openboard
-        # xournalpp
+        xournalpp
         glib
         # newsflash
         # foliate
@@ -55,8 +54,8 @@
         gnome.gnome-calendar
         gnome.seahorse
         gnome.gnome-maps
-        openvpn
-        protonmail-bridge
+        # openvpn
+        # protonmail-bridge
         # texliveFull
         numbat
 

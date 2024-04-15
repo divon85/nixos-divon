@@ -16,38 +16,21 @@ let
             sed -i 's/0x00, 0x09, 0xBF, 0x12, 0x34, 0x56/0x00, 0x22, 0xAA, 0x06, 0x78, 0x57/g' desmume/src/wifi.cpp;
           '';
         }))
-        dolphin
         genesis-plus-gx
+        mesen-s
       ];
     });
 in
 {
   home.packages = with pkgs; [
     # Games
-    pegasus-frontend
+    # pegasus-frontend
     myRetroarch
     libfaketime
-    airshipper
+    # airshipper
     qjoypad
-    superTux
-    superTuxKart
-
-    # I installed these in distrobox
-    # and exported using distrobox-export
-    (pkgs.makeDesktopItem {
-      name = "pokefinder";
-      desktopName = "PokeFinder";
-      exec = "/home/emmet/.local/bin/pokefinder";
-      terminal = false;
-      type = "Application";
-    })
-    (pkgs.makeDesktopItem {
-      name = "eontimer";
-      desktopName = "EonTimer";
-      exec = "/home/emmet/.local/bin/eontimer";
-      terminal = false;
-      type = "Application";
-    })
+    # superTux
+    # superTuxKart
   ];
 
   nixpkgs.config = {

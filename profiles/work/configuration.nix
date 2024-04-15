@@ -15,23 +15,20 @@
       ../../system/hardware/bluetooth.nix
       (./. + "../../../system/wm"+("/"+userSettings.wm)+".nix") # My window manager
       #../../system/app/flatpak.nix
-      ../../system/app/virtualization.nix
+      # ../../system/app/virtualization.nix
       ( import ../../system/app/docker.nix {storageDriver = null; inherit pkgs userSettings lib;} )
       ../../system/security/doas.nix
       ../../system/security/gpg.nix
       ../../system/security/blocklist.nix
       ../../system/security/firewall.nix
       ../../system/security/firejail.nix
-      ../../system/security/openvpn.nix
+      # ../../system/security/openvpn.nix
       ../../system/security/automount.nix
       ../../system/style/stylix.nix
     ];
 
   # Fix nix path
-  nix.nixPath = [ "nixpkgs=/nix/var/nix/profiles/per-user/root/channels/nixos"
-                  "nixos-config=$HOME/dotfiles/system/configuration.nix"
-                  "/nix/var/nix/profiles/per-user/root/channels"
-                ];
+  nix.nixPath = [ "nixpkgs=/nix/var/nix/profiles/per-user/root/channels/nixos" "nixos-config=$HOME/dotfiles/system/configuration.nix" "/nix/var/nix/profiles/per-user/root/channels" ];
 
   # Ensure nix flakes are enabled
   nix.package = pkgs.nixFlakes;
@@ -84,11 +81,10 @@
 
   # System packages
   environment.systemPackages = with pkgs; [
-    vim
+    neovim
     wget
     zsh
     git
-    cryptsetup
     home-manager
     wpa_supplicant
   ];
