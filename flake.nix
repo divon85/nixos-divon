@@ -23,7 +23,7 @@
         };
     };
 
-    outputs = { self, nixpkgs, home-manager, stylix, rust-overlay, blocklist-hosts, hyprland, hyprland-plugins, ... }:
+    outputs = inputs@{ self, nixpkgs, home-manager, stylix, rust-overlay, blocklist-hosts, hyprland, hyprland-plugins, ... }:
     
     let
         # ---- SYSTEM SETTINGS ---- #
