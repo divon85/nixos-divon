@@ -19,6 +19,14 @@
             grubDevice = ""; # device identifier for grub; only used for legacy (bios) boot mode
         };
 
+    pkgs = import nixpkgs-stable {
+        system = systemSettings.system;
+        config = {
+            allowUnfree = true;
+            allowUnfreePredicate = (_: true);
+        };
+    };
+
         lib = nixpkgs.lib;
     in {
         nixosConfigurations = {
