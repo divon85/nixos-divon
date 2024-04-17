@@ -35,6 +35,14 @@
                 modules = [
                     ./conf/configuration.nix
                 ];
+                specialArgs = {
+                    # pass config variables from above
+                    inherit pkgs;
+                    inherit systemSettings;
+                    # inherit userSettings;
+                    # inherit (inputs) stylix;
+                    # inherit (inputs) blocklist-hosts;
+                };
             };
         };
     };
