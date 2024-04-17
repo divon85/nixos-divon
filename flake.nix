@@ -19,7 +19,7 @@
             grubDevice = ""; # device identifier for grub; only used for legacy (bios) boot mode
         };
 
-    pkgs = import nixpkgs-stable {
+    pkgs = import nixpkgs {
         system = systemSettings.system;
         config = {
             allowUnfree = true;
