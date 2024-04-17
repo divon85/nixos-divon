@@ -1,4 +1,0 @@
-#+title: System-level Nix Modules
-#+author: Divon
-
-Please remember to copy the hardware-configuration.nix from /etc/nixos/ into this folder!!!!

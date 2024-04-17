@@ -3,7 +3,7 @@
 let blocklist = builtins.readFile "${blocklist-hosts}/alternates/gambling-porn/hosts";
 in
 {
-  networking.extraHosts = ''
+    networking.extraHosts = ''
     "${blocklist}"
-  '';
+    '';
 }
