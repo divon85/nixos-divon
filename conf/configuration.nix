@@ -7,7 +7,7 @@
   imports =
   [ 
     ../system/hardware-configuration.nix
-    ( import ../system/app/docker.nix {storageDriver = null; inherit pkgs userSettings lib;} )
+    # ( import ../system/app/docker.nix {storageDriver = null; inherit pkgs userSettings lib;} )
     ../system/app/gamemode.nix
     ../system/app/prismlauncher.nix
     ../system/app/steam.nix
