@@ -69,6 +69,7 @@
                 system = systemSettings.system;
                 modules = [
                     ./conf/configuration.nix
+                    ./conf/script.nix
                 ];
                 specialArgs = {
                     # pass config variables from above
