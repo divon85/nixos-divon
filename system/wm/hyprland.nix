@@ -1,41 +1,29 @@
-{ config, pkgs, ... }:
-
+{ inputs, pkgs, lib, ... }: let
+  pkgs-hyprland = inputs.hyprland.inputs.nixpkgs.legacyPackages.${pkgs.stdenv.hostPlatform.system};
+in
 {
-    imports = [
-        ./dbus.nix
-        ./fonts.nix
-        ./gnome-keyring.nix
-        ./pipewire.nix
-    ];
+  # Import wayland config
+  imports = [ ./wayland.nix
+              ./pipewire.nix
+              ./dbus.nix
+            ];
 
-    environment.systemPackages = with pkgs;
-    [
-        wayland waydroid
-        (sddm-chili-theme.override {
-            themeConfig = {
-                background = config.stylix.image;
-                ScreenWidth = 1366;
-                ScreenHeight = 768;
-                blur = true;
-                recursiveBlurLoops = 3;
-                recursiveBlurRadius = 5;
-        };})
-    ];
+  # Security
+  security = {
+    pam.services.login.enableGnomeKeyring = true;
+  };
 
-    # Configure xwayland
-    services.xserver = {
+  services.gnome.gnome-keyring.enable = true;
+
+  programs = {
+    hyprland = {
+      enable = true;
+      package = inputs.hyprland.packages.${pkgs.system}.hyprland;
+      xwayland = {
         enable = true;
-        xkb = {
-            layout = "jp";
-            variant = "";
-            options = "caps:escape";
-        };
-        displayManager.sddm = {
-            enable = true;
-            wayland.enable = true;
-            enableHidpi = true;
-            theme = "chili";
-            package = pkgs.sddm;
-        };
+      };
+      portalPackage = pkgs-hyprland.xdg-desktop-portal-hyprland;
     };
+  };
+
 }
