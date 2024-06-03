@@ -6,7 +6,7 @@
         nixpkgs.url = "nixpkgs/nixos-24.05";
 
         home-manager.url = "github:nix-community/home-manager/release-24.05";
-        home-manager.inputs.nixpkgs.follows = "nixpkgs-stable";
+        home-manager.inputs.nixpkgs.follows = "nixpkgs";
     };
     
     outputs = inputs@{ self, ... }:
@@ -37,9 +37,9 @@
             fontPkg = pkgs.intel-one-mono; # Font package
         };
 
-        lib = nixpkgs.lib;
+        lib = inputs.nixpkgs.lib;
 
-        pkgs = import nixpkgs {
+        pkgs = import inputs.nixpkgs {
             system = systemSettings.system;
             config = {
                 allowUnfree = true;
@@ -60,7 +60,7 @@
                     inherit systemSettings;
                     inherit userSettings;
                     inherit inputs;
-                }
+                };
             };
         };
 
