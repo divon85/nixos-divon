@@ -32,6 +32,7 @@
         rofi
         git
         syncthing
+        gnome.nautilus
 
         # Office
         openboard
