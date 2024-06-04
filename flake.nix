@@ -5,37 +5,8 @@
     inputs = {
         nixpkgs.url = "nixpkgs/nixos-24.05";
 
-        home-manager = {
-            url = "github:nix-community/home-manager/release-24.05";
-            inputs.nixpkgs.follows = "nixpkgs";
-        };
-
-        blocklist-hosts = {
-            url = "github:StevenBlack/hosts";
-            flake = false;
-        };
-
-        hyprland = {
-            url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
-            inputs.nixpkgs.follows = "nixpkgs";
-        };
-
-        hyprland-plugins = {
-            url = "github:hyprwm/hyprland-plugins";
-            inputs.hyprland.follows = "hyprland";
-        };
-        
-        hycov = {
-            url = "github:DreamMaoMao/hycov";
-            inputs.hyprland.follows = "hyprland";
-        };
-        
-        hyprgrass = {
-            url = "github:horriblename/hyprgrass";
-            inputs.hyprland.follows = "hyprland";
-        };
-
-        stylix.url = "github:danth/stylix";
+        home-manager.url = "github:nix-community/home-manager/release-24.05";
+        home-manager.inputs.nixpkgs.follows = "nixpkgs-stable";
     };
     
     outputs = inputs@{ self, ... }:
@@ -98,7 +69,7 @@
                 system = systemSettings.system;
                 modules = [
                     ./conf/configuration.nix
-                    ./conf/script.nix
+                    # ./conf/script.nix
                 ];
                 specialArgs = {
                     # pass config variables from above
