@@ -13,5 +13,4 @@
         ubuntu_font_family
         terminus_font
     ];
-
 }

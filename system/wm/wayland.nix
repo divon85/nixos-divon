@@ -1,39 +1,42 @@
 { config, pkgs, ... }:
 
 {
-  imports = [ ./pipewire.nix
-              ./dbus.nix
-              ./gnome-keyring.nix
-              ./fonts.nix
-            ];
-
-  environment.systemPackages = with pkgs;
-    [ wayland waydroid
-      (sddm-chili-theme.override {
-        themeConfig = {
-          background = config.stylix.image;
-          ScreenWidth = 1920; #1366; #1920;
-          ScreenHeight = 1080; #768; #1080;
-          blur = true;
-          recursiveBlurLoops = 3;
-          recursiveBlurRadius = 5;
-        };})
+    imports = [
+        ./pipewire.nix
+        ./dbus.nix
+        ./gnome-keyring.nix
+        ./fonts.nix
     ];
 
-  # Configure xwayland
-  services.xserver = {
-    enable = true;
-    xkb = {
-      layout = "jp";
-      variant = "";
-      options = "caps:escape";
+    environment.systemPackages = with pkgs;
+    [
+        wayland waydroid
+        (sddm-chili-theme.override {
+            themeConfig = {
+                background = config.stylix.image;
+                ScreenWidth = 1366;
+                ScreenHeight = 768;
+                blur = true;
+                recursiveBlurLoops = 3;
+                recursiveBlurRadius = 5;
+            };
+        })
+    ];
+
+    # Configure xwayland
+    services.xserver = {
+        enable = true;
+        xkb = {
+            layout = "jp";
+            variant = "";
+            options = "caps:escape";
+        };
+        displayManager.sddm = {
+            enable = true;
+            wayland.enable = true;
+            enableHidpi = true;
+            theme = "chili";
+            package = pkgs.sddm;
+        };
     };
-    displayManager.sddm = {
-      enable = true;
-      wayland.enable = true;
-      enableHidpi = true;
-      theme = "chili";
-      package = pkgs.sddm;
-    };
-  };
 }

@@ -16,7 +16,7 @@
     pamixer
     autorandr
     alacritty
-    kitty
+    # kitty
     dmenu
     rofi
     keepmenu
