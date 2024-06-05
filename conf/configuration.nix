@@ -2,7 +2,7 @@
 
 {
     imports = [
-        ../../system/hardware-configuration.nix
+        ../system/hardware-configuration.nix
         (./. + "../../system/wm"+("/"+userSettings.wm)+".nix") # My window manager
         ../system/app/gamemode.nix
         ../system/hardware/bluetooth.nix
