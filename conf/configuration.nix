@@ -17,15 +17,24 @@
 
   # Bootloader
   # Use systemd-boot if uefi, default to grub otherwise
-  boot.loader.systemd-boot.enable = if (systemSettings.bootMode == "uefi") then true else false;
-  boot.loader.efi.canTouchEfiVariables = if (systemSettings.bootMode == "uefi") then true else false;
-  boot.loader.efi.efiSysMountPoint = systemSettings.bootMountPath; # does nothing if running bios rather than uefi
-  boot.loader.grub.enable = if (systemSettings.bootMode == "uefi") then false else true;
-  boot.loader.grub.device = systemSettings.grubDevice; # does nothing if running uefi rather than bios
+  boot.loader = {
+    systemd-boot.enable = if (systemSettings.bootMode == "uefi") then true else false;
+    efi = {
+      canTouchEfiVariables = if (systemSettings.bootMode == "uefi") then true else false;
+      efiSysMountPoint = systemSettings.bootMountPath; # does nothing if running bios rather than uefi
+    };
+    grub = {
+      enable = if (systemSettings.bootMode == "uefi") then false else true;
+      device = systemSettings.grubDevice; # does nothing if running uefi rather than bios
+    };
+  };
   
   # Networking
-  networking.hostName = systemSettings.hostname; # Define your hostname.
-  networking.networkmanager.enable = true; # Use networkmanager
+  networking = {
+    hostName = systemSettings.hostname; # Define your hostname.
+    networkmanager.enable = true; # Use networkmanager
+    timeServers = options.networking.timeServers.default ++ [ "ntp.example.com" ];
+  };
 
   # Timezone and locale
   time.timeZone = systemSettings.timezone; # time zone
