@@ -1,16 +1,9 @@
 {
-  description = "divon nix";
+  description = "Divon NixOS flakes...";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-24.05";
-
-    wezterm.url = "github:wez/wezterm?dir=nix";
-
-    blocklist-hosts = {
-      url = "github:StevenBlack/hosts";
-      flake = false;
-    };
+    nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-24.11";
   };
 
   outputs = inputs@{ self, ... }:
@@ -18,11 +11,11 @@
   # ---- SYSTEM SETTINGS ---- #
   systemSettings = {
     system = "x86_64-linux"; # system architecture
-    hostname = "leptop-igor";
+    hostname = "divon-machina";
     timezone = "Asia/Tokyo";
     locale = "en_US.UTF-8";
     bootMode = "uefi"; # bios or uefi
-    bootMountPath = "/boot";
+    bootMountPath = "/BOOT";
     grubDevice = "/dev/sda"; # device identifier for grub; only used for legacy (bios) boot mode
   };
 
@@ -56,15 +49,15 @@
     nixosConfigurations = {
       system = lib.nixosSystem {
         system = systemSettings.system;
-	modules = [
-	  ./conf/configuration.nix
-	];
-	specialArgs = {
-	  inherit pkgs-stable;
-	  inherit systemSettings;
-	  inherit userSettings;
-	  inherit inputs;
-	};
+	      modules = [
+          ./conf/configuration.nix
+        ];
+        specialArgs = {
+          inherit pkgs-stable;
+          inherit systemSettings;
+          inherit userSettings;
+          inherit inputs;
+        };
       };
     };
   };
