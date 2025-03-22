@@ -2,7 +2,7 @@
 
 {
   imports = [
-    ./hardware-configuration.nix
+    # ./hardware-configuration.nix
     ./system/hardware/bluetooth.nix
     ./system/hardware/kernel.nix
     ./system/hardware/opengl.nix
