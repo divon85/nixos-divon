@@ -4,27 +4,27 @@
     inputs = {
         nixpkgs.url = "github:nixos/nixpkgs/nixos-24.11";
 
-        home-manager = {
-            url = "github:nix-community/home-manager/release-24.11";
-            inputs.nixpkgs.follows = "nixpkgs";
-        };
+        # home-manager = {
+        #     url = "github:nix-community/home-manager/release-24.11";
+        #     inputs.nixpkgs.follows = "nixpkgs";
+        # };
 
-        hyprland = {
-            url = "github:hyprwm/Hyprland";
-            inputs.nixpkgs.follows = "nixpkgs";
-        };
+        # hyprland = {
+        #     url = "github:hyprwm/Hyprland";
+        #     inputs.nixpkgs.follows = "nixpkgs";
+        # };
 
-        hyprland-plugins = {
-            url = "github:hyprwm/hyprland-plugins";
-            inputs.hyprland.follows = "hyprland";
-        };
+        # hyprland-plugins = {
+        #     url = "github:hyprwm/hyprland-plugins";
+        #     inputs.hyprland.follows = "hyprland";
+        # };
 
-        hyprlock = {
-            url = "github:hyprwm/hyprlock";
-            inputs.nixpkgs.follows = "nixpkgs";
-        };
+        # hyprlock = {
+        #     url = "github:hyprwm/hyprlock";
+        #     inputs.nixpkgs.follows = "nixpkgs";
+        # };
 
-        stylix.url = "github:danth/stylix";
+        # stylix.url = "github:danth/stylix";
     };
 
     outputs = inputs@{ self, ... }:
@@ -76,7 +76,6 @@
                 system = systemSettings.system;
                 modules = [
                     ./conf/configuration.nix
-                    ./system/hardware-configuration.nix
                 ];
                 specialArgs = {
                     inherit systemSettings;
