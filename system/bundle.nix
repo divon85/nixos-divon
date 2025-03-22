@@ -1,8 +1,6 @@
 {
   imports = [
     ./hardware-configuration.nix
-    ( import ./system/app/docker.nix {storageDriver = null; inherit pkgs userSettings lib;} )
-    ./system/app/virtualization.nix
     ./system/hardware/bluetooth.nix
     ./system/hardware/kernel.nix
     ./system/hardware/opengl.nix
@@ -14,5 +12,7 @@
     ./system/security/blocklist.nix
     ./system/security/doas.nix
     ./system/security/firejail.nix
+    ./system/style/stylix.nix
+    (./. + "../system/wm"+("/"+userSettings.wm)+".nix") # My window manager
   ];
 }
