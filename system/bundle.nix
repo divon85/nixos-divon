@@ -1,3 +1,5 @@
+{ userSettings, ... }:
+
 {
   imports = [
     ./hardware-configuration.nix

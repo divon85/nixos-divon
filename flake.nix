@@ -76,6 +76,7 @@
                 system = systemSettings.system;
                 modules = [
                     ./conf/configuration.nix
+                    ./system/hardware-configuration.nix
                 ];
                 specialArgs = {
                     inherit systemSettings;
