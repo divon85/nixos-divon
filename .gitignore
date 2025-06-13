@@ -1,0 +1,8 @@
+# Ignore README.md files
+**/README.md
+
+# Ignore the original configuration
+system_configurations/configuration-orig.nix
+
+# Ignore lock files
+*.lock
