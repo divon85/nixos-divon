@@ -3,6 +3,7 @@
 
     inputs = {
         nixpkgs.url = "github:nixos/nixpkgs/nixos-25.05";
+        hyprland.url = "github:hyprwm/Hyprland";
     };
 
     outputs = inputs@{ self, ... }:
