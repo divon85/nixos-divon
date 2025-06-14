@@ -40,7 +40,7 @@
     in {
         nixosConfigurations = {
             nixhost = lib.nixosSystem {
-                architecture = systemSettings.architecture;
+                system = systemSettings.architecture;
                 modules = [ ./configs/configuration.nix ];
                 specialArgs = {
                     inherit systemSettings;
