@@ -10,7 +10,7 @@
     # ---- SYSTEM SETTINGS ---- #
     systemSettings = {
         architecture = "x86_64-linux"; #system architecture
-        hostname = "divon-nixos";
+        hostname = "igor-nixos";
         timezone = "Asia/Tokyo";
         locale = "en_US.UTF-8";
         bootMode = "uefi"; # bios or uefi
@@ -38,9 +38,9 @@
 
     in {
         nixosConfigurations = {
-            system = lib.nixosSystem {
-                system = systemSettings.architecture;
-                modules = [ ./system_configurations/configuration-orig.nix ];
+            nixhost = lib.nixosSystem {
+                architecture = systemSettings.architecture;
+                modules = [ ./configs/configuration-orig.nix ];
                 specialArgs = {
                     inherit systemSettings;
                     inherit userSettings;
