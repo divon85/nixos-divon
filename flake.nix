@@ -2,7 +2,7 @@
     description = "Divon NixOS Flakes";
 
     inputs = {
-        nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-25.05";
+        nixpkgs.url = "github:nixos/nixpkgs/nixos-25.05";
     };
 
     outputs = inputs@{ self, ... }:
@@ -40,7 +40,7 @@
         nixosConfigurations = {
             nixhost = lib.nixosSystem {
                 architecture = systemSettings.architecture;
-                modules = [ ./configs/configuration-orig.nix ];
+                modules = [ ./configs/configuration.nix ];
                 specialArgs = {
                     inherit systemSettings;
                     inherit userSettings;
