@@ -29,6 +29,14 @@
 
     lib = inputs.nixpkgs.lib;
 
+    pkgs = import inputs.nixpkgs {
+        system = systemSettings.system;
+        config = {
+            allowUnfree = true;
+            allowUnfreePredicate = (_: true);
+        };
+    };
+
     in {
         nixosConfigurations = {
             nixhost = lib.nixosSystem {
