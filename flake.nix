@@ -30,7 +30,7 @@
     lib = inputs.nixpkgs.lib;
 
     pkgs = import inputs.nixpkgs {
-        system = systemSettings.system;
+        architecture = systemSettings.architecture;
         config = {
             allowUnfree = true;
             allowUnfreePredicate = (_: true);
@@ -39,8 +39,8 @@
 
     in {
         nixosConfigurations = {
-            nixhost = lib.nixosSystem {
-                system = systemSettings.architecture;
+            igor-nixos = lib.nixosSystem {
+                architecture = systemSettings.architecture;
                 modules = [ ./configs/configuration.nix ];
                 specialArgs = {
                     inherit systemSettings;
