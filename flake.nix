@@ -3,14 +3,20 @@
 
     inputs = {
         nixpkgs.url = "github:nixos/nixpkgs/nixos-25.05";
+
         hyprland.url = "github:hyprwm/Hyprland";
+
+        # home-manager = {
+        #     url = "github:nix-community/home-manager";
+        #     inputs.nixpkgs.follows = "nixpkgs";
+        # };
     };
 
     outputs = inputs@{ self, ... }:
     let
     # ---- SYSTEM SETTINGS ---- #
     systemSettings = {
-        system = "x86_64-linux"; #system architecture
+        architecture = "x86_64-linux"; #system architecture
         hostname = "igor-nixos";
         timezone = "Asia/Tokyo";
         locale = "en_US.UTF-8";
@@ -29,19 +35,14 @@
 
     lib = inputs.nixpkgs.lib;
 
-    pkgs = import inputs.nixpkgs {
-        system = systemSettings.system;
-        config = {
-            allowUnfree = true;
-            allowUnfreePredicate = (_: true);
-        };
-    };
-
     in {
         nixosConfigurations = {
-            igor-nixos = lib.nixosSystem {
-                system = systemSettings.system;
-                modules = [ ./configs/configuration.nix ];
+            confs = lib.nixosSystem {
+                architecture = systemSettings.architecture;
+                modules = [
+                    ./confs/configuration.nix
+                    # inputs.home-manager.nixosModules.default
+                    ];
                 specialArgs = {
                     inherit systemSettings;
                     inherit userSettings;

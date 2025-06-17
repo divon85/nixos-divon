@@ -1,6 +1,13 @@
 { pkgs, lib, options, systemSettings, userSettings, ... }: {
     imports = [
-        ../system/bundle.nix
+        ./hardware-configuration.nix
+        ./modules/bootloader.nix
+        ./modules/hyprland.nix
+        ./modules/networking.nix
+        ./modules/services.nix
+        ./modules/software.nix
+        ./modules/thunar.nix
+        ./modules/timezone.nix
     ];
 
     # User account
