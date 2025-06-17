@@ -33,5 +33,5 @@ in
                 alias turnoff='history -c && sudo shutdown -h now'
             fi
         '';
-    }
+    };
 }
