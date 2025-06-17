@@ -30,20 +30,24 @@
         waybar                          # Status bar
         rofi-wayland                    # Application launcher
         wl-clipboard                    # Clipboard functionality
+        wlogout                         # logout function
+        hyprlock
+        hyprpaper
+        hypridle
 
         # Apps
         firefox                         # Web browser
         grimblast                       # Screenshot tools
 
         # Fonts
-        pkgs.typstPackages.fontawesome_0_4_0
-        pkgs.noto-fonts-cjk-sans
-        pkgs.noto-fonts-cjk-serif
-        pkgs.noto-fonts-monochrome-emoji
-        pkgs.noto-fonts-color-emoji
-        pkgs.texlivePackages.japanese-otf
-        pkgs.fira-sans
-        pkgs.fira-code
+        typstPackages.fontawesome_0_4_0
+        noto-fonts-cjk-sans
+        noto-fonts-cjk-serif
+        noto-fonts-monochrome-emoji
+        noto-fonts-color-emoji
+        texlivePackages.japanese-otf
+        fira-sans
+        fira-code
     ];
 
     programs.firefox.enable = true;
