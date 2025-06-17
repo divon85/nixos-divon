@@ -52,13 +52,14 @@
         };
 
         homeConfigurations = {
-            igor = home-manager.lib.homeManagerConfiguration {
+            igor = inputs.home-manager.lib.homeManagerConfiguration {
                 modules = [
                     ./homes/home.nix
                 ];
                 extraSpecialArgs = {
                     inherit systemSettings;
                     inherit userSettings;
+                    inherit pkgs;
                     inherit inputs;
                 };
             };
