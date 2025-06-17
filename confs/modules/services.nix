@@ -7,4 +7,7 @@
 
     # Enable the OpenSSH daemon
     services.openssh.enable = true;
+
+    # Enable vscode-server
+    services.vscode-server.enable = true;
 }

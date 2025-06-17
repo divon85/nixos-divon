@@ -38,7 +38,7 @@
         # Apps
         firefox                         # Web browser
         grimblast                       # Screenshot tools
-        vscode                          # code editor
+	vscode
 
         # Fonts
         typstPackages.fontawesome_0_4_0
@@ -53,4 +53,5 @@
 
     programs.firefox.enable = true;
     programs.zsh.enable = true;
+    programs.nix-ld.enable = true;
 }
