@@ -10,7 +10,7 @@
     let
     # ---- SYSTEM SETTINGS ---- #
     systemSettings = {
-        architecture = "x86_64-linux"; #system architecture
+        system = "x86_64-linux"; #system architecture
         hostname = "igor-nixos";
         timezone = "Asia/Tokyo";
         locale = "en_US.UTF-8";
@@ -30,7 +30,7 @@
     lib = inputs.nixpkgs.lib;
 
     pkgs = import inputs.nixpkgs {
-        architecture = systemSettings.architecture;
+        system = systemSettings.system;
         config = {
             allowUnfree = true;
             allowUnfreePredicate = (_: true);
@@ -40,7 +40,7 @@
     in {
         nixosConfigurations = {
             igor-nixos = lib.nixosSystem {
-                architecture = systemSettings.architecture;
+                system = systemSettings.system;
                 modules = [ ./configs/configuration.nix ];
                 specialArgs = {
                     inherit systemSettings;
