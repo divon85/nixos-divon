@@ -5,6 +5,7 @@
         package = inputs.hyprland.packages.${pkgs.system}.hyprland;
         extraConfig = ''
 
+            # Some default animations, see https://wiki.hyprland.org/Configuring/Animations/ for more
             animations {
                 enabled = true
                 bezier = myBezier, 0.05, 0.9, 0.1, 1.05
@@ -16,12 +17,12 @@
                 animation = workspaces, 1, 6, default
             }
 
+            # Execute your favorite apps at launch
             exec-once = waybar
             exec-once = hyprpaper
             exec-once = dunst
 
-            monitor=,preferred,auto,auto
-
+            # Example binds, see https://wiki.hyprland.org/Configuring/Binds/ for more
             bind = SUPER, RETURN, exec, alacritty # Open Alactritty
             bind = SUPER, Q, killactive # Close current window
             bind = SUPER CTRL, Q, exec, ~/.dotfiles/scripts/logout.sh # Close current window
@@ -88,6 +89,103 @@
             bind = , XF86Calculator, exec, qalculate-gtk
             bind = , XF86Lock, exec, hyprlock
 
+            env = XCURSOR_SIZE,24
+
+            # See https://wiki.hyprland.org/Configuring/Variables/ for more
+            decoration {
+                rounding = 10
+                rounding_power = 2
+
+                # Change transparency of focused and unfocused windows
+                active_opacity = 1.0
+                inactive_opacity = 0.8
+
+                blur {
+                    enabled = true
+                    size = 3
+                    passes = 1
+                    vibrancy = 0.1696
+                }
+
+                shadow {
+                    enabled = true
+                    range = 4
+                    render_power = 3
+                    color = rgba(1a1a1aee)
+                }
+            }
+
+            # XDG Desktop Portal
+            env = XDG_CURRENT_DESKTOP,Hyprland
+            env = XDG_SESSION_TYPE,wayland
+            env = XDG_SESSION_DESKTOP,Hyprland
+
+            # QT
+            env = QT_QPA_PLATFORM,wayland;xcb
+            env = QT_QPA_PLATFORMTHEME,qt6ct
+            env = QT_WAYLAND_DISABLE_WINDOWDECORATION,1
+            env = QT_AUTO_SCREEN_SCALE_FACTOR,1
+
+            # See https://wiki.hyprland.org/Configuring/Variables/ for more
+            general {
+                gaps_in = 5
+                gaps_out = 20
+                border_size = 2
+                col.active_border = rgba(33ccffee) rgba(00ff99ee) 45deg
+                col.inactive_border = rgba(595959aa)
+                allow_tearing = false
+                layout = dwindle
+                resize_on_border = true
+            }
+
+            # See https://wiki.hyprland.org/Configuring/Variables/ for more
+            gestures {
+                workspace_swipe = true
+            }
+
+            # https://wiki.hyprland.org/Configuring/Variables/#input
+            input {
+                kb_layout = jp
+                kb_variant =
+                kb_model =
+                kb_options =
+                kb_rules =
+
+                follow_mouse = 1
+
+                sensitivity = 0 # -1.0 - 1.0, 0 means no modification.
+
+                touchpad {
+                    natural_scroll = false
+                }
+            }
+
+            # Example per-device config
+            # See https://wiki.hyprland.org/Configuring/Keywords/#per-device-input-configs for more
+            device {
+                name = epic-mouse-v1
+                sensitivity = -0.5
+            }
+
+            # See https://wiki.hyprland.org/Configuring/Dwindle-Layout/ for more
+            dwindle {
+                pseudotile = true # Master switch for pseudotiling. Enabling is bound to mainMod + P in the keybinds section below
+                preserve_split = true # You probably want this
+            }
+
+            # See https://wiki.hyprland.org/Configuring/Master-Layout/ for more
+            master {
+                new_status = master
+            }
+
+            # https://wiki.hyprland.org/Configuring/Variables/#misc
+            misc {
+                force_default_wallpaper = 0 # Set to 0 or 1 to disable the anime mascot wallpapers
+                disable_hyprland_logo = true # If true disables the random hyprland logo / anime girl background. :(
+            }
+
+            # See https://wiki.hyprland.org/Configuring/Monitors/
+            monitor=,preferred,auto,auto
         '';
     };
 }

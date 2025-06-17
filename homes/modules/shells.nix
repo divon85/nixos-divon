@@ -16,11 +16,11 @@ in
 {
     programs.zsh = {
         enable = true;
-        enableAutosuggestions = true;
+        autosuggestion.enable = true;
         syntaxHighlighting.enable = true;
         enableCompletion = true;
         shellAliases = zshAliases;
-        initExtra = ''
+        initContent = ''
             if [ -f ~/.zsh_history ]; then
                 alias histc='rm ~/.zsh_history && history -c'
             else
