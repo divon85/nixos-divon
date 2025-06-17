@@ -89,5 +89,5 @@
             bind = , XF86Lock, exec, hyprlock
 
         '';
-    }
+    };
 }
