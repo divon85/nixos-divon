@@ -38,6 +38,7 @@
         # Apps
         firefox                         # Web browser
         grimblast                       # Screenshot tools
+        vscode                          # code editor
 
         # Fonts
         typstPackages.fontawesome_0_4_0
