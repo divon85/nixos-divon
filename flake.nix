@@ -52,7 +52,7 @@
         };
 
         homeConfigurations = {
-            user = home-manager.lib.homeManagerCOnfiguration {
+            user = home-manager.lib.homeManagerConfiguration {
                 modules = [
                     ./homes/home.nix
                 ];
