@@ -35,6 +35,14 @@
 
     lib = inputs.nixpkgs.lib;
 
+    pkgs = import inputs.nixpkgs {
+        system = systemSettings.architecture;
+        config = {
+            allowUnfree = true;
+            allowUnfreePredicate = (_: true);
+        };
+    };
+
     in {
         nixosConfigurations = {
             igor-nixos = lib.nixosSystem {
