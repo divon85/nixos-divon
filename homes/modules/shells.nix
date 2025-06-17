@@ -32,6 +32,15 @@ in
             else
                 alias turnoff='history -c && sudo shutdown -h now'
             fi
+
+            if [[ $(tty) == *"pts"* ]]; then
+                fastfetch --config examples/13
+            else
+                echo
+                if [ -f /bin/hyprctl ]; then
+                    echo "Start Hyprland with command Hyprland"
+                fi
+            fi
         '';
     };
 }
