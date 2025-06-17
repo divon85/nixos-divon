@@ -14,10 +14,13 @@
             createDirectories = true;
             documents = "${config.home.homeDirectory}/Documents";
             download = "${config.home.homeDirectory}/Downloads";
-            ebooks = "${config.home.homeDirectory}/Documents/Ebooks";
             music = "${config.home.homeDirectory}/Music";
             pictures = "${config.home.homeDirectory}/Pictures";
-            projects = "${config.home.homeDirectory}/Documents/Projects";
+            extraConfig = {
+                XDG_DOTFILES_DIR = "${config.home.homeDirectory}/.dotfiles";
+                XDG_BOOK_DIR = "${config.home.homeDirectory}/Documents/Books";
+                XDG_PROJECT_DIR = "${config.home.homeDirectory}/Documents/Projects";
+            };
         };
     };
 }
