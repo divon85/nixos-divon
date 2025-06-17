@@ -115,11 +115,6 @@
                 }
             }
 
-            # XDG Desktop Portal
-            env = XDG_CURRENT_DESKTOP,Hyprland
-            env = XDG_SESSION_TYPE,wayland
-            env = XDG_SESSION_DESKTOP,Hyprland
-
             # QT
             env = QT_QPA_PLATFORM,wayland;xcb
             env = QT_QPA_PLATFORMTHEME,qt6ct
