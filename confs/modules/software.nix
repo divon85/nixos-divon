@@ -15,6 +15,7 @@
         python3                         # still need comment?
         swww                            # interactive wallpaper
         ffmpeg                          # Media codec
+        fastfetch                       # its fun
 
         # File Manager
         yazi                            # Terminal file manager
