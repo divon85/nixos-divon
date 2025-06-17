@@ -37,8 +37,8 @@
 
     in {
         nixosConfigurations = {
-            confs = lib.nixosSystem {
-                architecture = systemSettings.architecture;
+            igor-nixos = lib.nixosSystem {
+                system = systemSettings.architecture;
                 modules = [
                     ./confs/configuration.nix
                     # inputs.home-manager.nixosModules.default
