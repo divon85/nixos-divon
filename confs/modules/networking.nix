@@ -1,5 +1,6 @@
+{ systemSettings, ... }:
 {
     # Enable networking
-    networking.hostName = "igor-nixos"; # Define your hostname.
+    networking.hostName = systemSettings.hostname; # Define your hostname.
     networking.networkmanager.enable = true;
 }

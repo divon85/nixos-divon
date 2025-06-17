@@ -6,10 +6,10 @@
 
         hyprland.url = "github:hyprwm/Hyprland";
 
-        # home-manager = {
-        #     url = "github:nix-community/home-manager";
-        #     inputs.nixpkgs.follows = "nixpkgs";
-        # };
+        home-manager = {
+            url = "github:nix-community/home-manager/release-25.05";
+            inputs.nixpkgs.follows = "nixpkgs";
+        };
     };
 
     outputs = inputs@{ self, ... }:
@@ -41,9 +41,22 @@
                 system = systemSettings.architecture;
                 modules = [
                     ./confs/configuration.nix
-                    # inputs.home-manager.nixosModules.default
+                    inputs.home-manager.nixosModules.default
                     ];
                 specialArgs = {
+                    inherit systemSettings;
+                    inherit userSettings;
+                    inherit inputs;
+                };
+            };
+        };
+
+        homeConfigurations = {
+            user = home-manager.lib.homeManagerCOnfiguration {
+                modules = [
+                    ./homes/home.nix
+                ];
+                extraSpecialArgs = {
                     inherit systemSettings;
                     inherit userSettings;
                     inherit inputs;
