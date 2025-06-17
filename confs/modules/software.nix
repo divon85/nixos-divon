@@ -33,6 +33,16 @@
         # Apps
         firefox                         # Web browser
         grimblast                       # Screenshot tools
+
+        # Fonts
+        pkgs.typstPackages.fontawesome_0_4_0
+        pkgs.noto-fonts-cjk-sans
+        pkgs.noto-fonts-cjk-serif
+        pkgs.noto-fonts-monochrome-emoji
+        pkgs.noto-fonts-color-emoji
+        pkgs.texlivePackages.japanese-otf
+        pkgs.fira-sans
+        pkgs.fira-code
     ];
 
     programs.firefox.enable = true;
