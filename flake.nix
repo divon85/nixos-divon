@@ -52,7 +52,7 @@
         };
 
         homeConfigurations = {
-            igor = inputs.home-manager.lib.homeManagerConfiguration {
+            igor = home-manager.lib.homeManagerConfiguration {
                 modules = [
                     ./homes/home.nix
                 ];
