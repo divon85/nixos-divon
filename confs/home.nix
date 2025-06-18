@@ -6,7 +6,7 @@
     programs.home-manager.enable = true;
 
     imports = [
-        ./home_modules/bundle.nix
+        ./home_modules/bundles.nix
     ];
 
     home.stateVersion = "25.05";

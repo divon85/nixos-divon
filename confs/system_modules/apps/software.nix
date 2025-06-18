@@ -47,8 +47,6 @@
         texlivePackages.japanese-otf
         fira-sans
         fira-code
-        nerdfonts
-        powerline
     ];
 
     programs.firefox.enable = true;
