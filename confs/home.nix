@@ -6,11 +6,7 @@
     programs.home-manager.enable = true;
 
     imports = [
-        ./modules/icons.nix
-        ./modules/shells.nix
-        # ./modules/software.nix
-        ./modules/xdgs.nix
-        ./modules/hyprland/hyprland.nix
+        ./system_modules/bundle.nix
     ];
 
     home.stateVersion = "25.05";

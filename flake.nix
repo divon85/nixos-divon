@@ -51,8 +51,6 @@
                 system = systemSettings.architecture;
                 modules = [
                     ./confs/configuration.nix
-                    inputs.home-manager.nixosModules.default
-		            inputs.vscode-server.nixosModules.default
                     ];
                 specialArgs = {
                     inherit systemSettings;
@@ -66,7 +64,7 @@
             igor = inputs.home-manager.lib.homeManagerConfiguration {
                 inherit pkgs;
                 modules = [
-                    ./homes/home.nix
+                    ./confs/home.nix
                 ];
                 extraSpecialArgs = {
                     inherit systemSettings;
