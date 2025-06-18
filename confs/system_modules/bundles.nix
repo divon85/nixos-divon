@@ -11,7 +11,6 @@ in
     imports = [
         ./apps/software.nix
         ./apps/thunar.nix
-        ./style/stylix.nix
         ./systems/bootloader.nix
         ./systems/networking.nix
         ./systems/services.nix

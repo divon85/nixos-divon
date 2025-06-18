@@ -1,14 +1,15 @@
 { config, lib, pkgs, inputs, userSettings, ... }:
 
 let
-    themePath = "../../themes/"+("/"+userSettings.theme+"/"+userSettings.theme)+".yaml";
-    themePolarity = lib.removeSuffix "\n" (builtins.readFile (./. + "../../themes/"+("/"+userSettings.theme)+"/polarity.txt"));
-    backgroundUrl = builtins.readFile (./. + "../../themes/"+("/"+userSettings.theme)+"/backgroundurl.txt");
-    backgroundSha256 = builtins.readFile (./. + "../../themes//"+("/"+userSettings.theme)+"/backgroundsha256.txt");
+    # themePath = "../../themes"+("/"+userSettings.theme+"/"+userSettings.theme)+".yaml";
+    themePath = "../../../themes/"+userSettings.theme+"/"+userSettings.theme+".yaml";
+    themePolarity = lib.removeSuffix "\n" (builtins.readFile (./. + "../../../themes"+("/"+userSettings.theme)+"/polarity.txt"));
+    backgroundUrl = builtins.readFile (./. + "../../../themes"+("/"+userSettings.theme)+"/backgroundurl.txt");
+    backgroundSha256 = builtins.readFile (./. + "../../../themes"+("/"+userSettings.theme)+"/backgroundsha256.txt");
 in
 {
 
-    imports = [ inputs.stylix.homeManagerModules.stylix ];
+    imports = [ inputs.stylix.homeModules.stylix ];
 
     # home.file.".currenttheme".text = userSettings.theme;
     # stylix.autoEnable = false;
@@ -17,7 +18,7 @@ in
     #     url = backgroundUrl;
     #     sha256 = backgroundSha256;
     # };
-    # stylix.base16Scheme = ./. + themePath;
+    stylix.base16Scheme = ./. + themePath;
 
     # stylix.fonts = {
     #     monospace = {
