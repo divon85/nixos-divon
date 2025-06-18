@@ -13,10 +13,10 @@
         zsh                             # Shell engine
         wpgtk                           # Color scheming
         python3                         # still need comment?
-        swww                            # interactive wallpaper
+        hyprpaper                       # wallpaper
         ffmpeg                          # Media codec
         fastfetch                       # its fun
-	starship
+        starship
 
         # File Manager
         yazi                            # Terminal file manager
@@ -43,8 +43,8 @@
         noto-fonts-cjk-sans
         noto-fonts-cjk-serif
         noto-fonts-emoji
-	font-awesome
-	nerd-fonts.symbols-only
+        font-awesome
+        nerd-fonts.symbols-only
         texlivePackages.japanese-otf
         fira-sans
         fira-code

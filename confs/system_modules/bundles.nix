@@ -12,7 +12,6 @@
         inputs.home-manager.nixosModules.default
         inputs.vscode-server.nixosModules.default
         inputs.stylix.nixosModules.stylix
-        inputs.swww.packages.${pkgs.system}.swww
     ];
 
     # User account

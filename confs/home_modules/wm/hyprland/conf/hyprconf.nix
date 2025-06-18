@@ -19,10 +19,8 @@
 
             # Execute your favorite apps at launch
             exec-once = waybar
-            exec-once = swww-daemon
+            exec-once = hyprpaper
             exec-once = dunst
-
-            # swww img ../../../../system_modules/style/tiger.png
 
             # Example binds, see https://wiki.hyprland.org/Configuring/Binds/ for more
             bind = SUPER, RETURN, exec, alacritty # Open Alactritty
@@ -90,8 +88,6 @@
             bind = , XF86AudioMicMute, exec, pactl set-source-mute @DEFAULT_SOURCE@ toggle
             bind = , XF86Calculator, exec, qalculate-gtk
             bind = , XF86Lock, exec, hyprlock
-
-            env = XCURSOR_SIZE,24
 
             # See https://wiki.hyprland.org/Configuring/Variables/ for more
             decoration {

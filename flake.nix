@@ -14,8 +14,6 @@
 	    vscode-server.url = "github:nix-community/nixos-vscode-server";
 
         stylix.url = "github:nix-community/stylix/release-25.05";
-
-        swww.url = "github:LGFae/swww";
     };
 
     outputs = inputs@{ self, ... }:
