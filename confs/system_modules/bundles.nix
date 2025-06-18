@@ -1,4 +1,4 @@
-{ inputs, ... }:
+{ inputs, userSettings, pkgs, ... }:
 {
     imports = [
         ./apps/software.nix
