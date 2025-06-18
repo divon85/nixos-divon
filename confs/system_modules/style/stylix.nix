@@ -4,10 +4,6 @@
     stylix = {
         enable = true;
         image = ./tiger.png;
-        cursor = {
-            package = pkgs.bibata-cursors;
-            name = "Bibata-Modern-Ice";
-        };
         fonts = {
             monospace = {
                 package = pkgs.nerdfonts.override {fonts = ["JetBrainsMono"];};
