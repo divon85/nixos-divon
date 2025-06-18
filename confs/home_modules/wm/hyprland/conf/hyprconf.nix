@@ -19,8 +19,10 @@
 
             # Execute your favorite apps at launch
             exec-once = waybar
-            exec-once = hyprpaper
+            exec-once = swww-daemon
             exec-once = dunst
+
+            # swww img ../../../../system_modules/style/tiger.png
 
             # Example binds, see https://wiki.hyprland.org/Configuring/Binds/ for more
             bind = SUPER, RETURN, exec, alacritty # Open Alactritty
