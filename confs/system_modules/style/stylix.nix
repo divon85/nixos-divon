@@ -6,8 +6,8 @@
         image = ./tiger.png;
         fonts = {
             monospace = {
-                package = pkgs.nerdfonts.override {fonts = ["JetBrainsMono"];};
-                name = "JetBrainsMono Nerd Font Mono";
+                package = pkgs.dejavu_fonts;
+                name = "DejaVu Sans Mono";
             };
             sansSerif = {
                 package = pkgs.dejavu_fonts;
@@ -16,6 +16,10 @@
             serif = {
                 package = pkgs.dejavu_fonts;
                 name = "DejaVu Serif";
+            };
+            emoji = {
+                package = pkgs.noto-fonts-emoji;
+                name = "Noto Color Emoji";
             };
             sizes = {
                 applications = 12;
@@ -30,5 +34,6 @@
             desktop = 1.0;
             popups = 1.0;
         };
+        polarity = "dark";
     };
 }
