@@ -11,7 +11,7 @@
             inputs.nixpkgs.follows = "nixpkgs";
         };
 
-	vscode-server.url = "github:nix-community/nixos-vscode-server";
+	    vscode-server.url = "github:nix-community/nixos-vscode-server";
     };
 
     outputs = inputs@{ self, ... }:
@@ -52,7 +52,7 @@
                 modules = [
                     ./confs/configuration.nix
                     inputs.home-manager.nixosModules.default
-		    inputs.vscode-server.nixosModules.default
+		            inputs.vscode-server.nixosModules.default
                     ];
                 specialArgs = {
                     inherit systemSettings;

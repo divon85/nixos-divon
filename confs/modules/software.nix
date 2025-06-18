@@ -38,14 +38,12 @@
         # Apps
         firefox                         # Web browser
         grimblast                       # Screenshot tools
-	vscode
 
         # Fonts
-        typstPackages.fontawesome_0_4_0
         noto-fonts-cjk-sans
         noto-fonts-cjk-serif
-        noto-fonts-monochrome-emoji
-        noto-fonts-color-emoji
+        noto-fonts-emoji
+	    font-awesome
         texlivePackages.japanese-otf
         fira-sans
         fira-code

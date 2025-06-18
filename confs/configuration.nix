@@ -8,7 +8,6 @@
         ./modules/software.nix
         ./modules/thunar.nix
         ./modules/timezone.nix
-        inputs.home-manager.nixosModules.default
     ];
 
     # User account
