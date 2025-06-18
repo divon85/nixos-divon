@@ -13,7 +13,7 @@
 
 	    vscode-server.url = "github:nix-community/nixos-vscode-server";
 
-        stylix.url = "github:danth/stylix";
+        stylix.url = "github:nix-community/stylix/release-25.05";
     };
 
     outputs = inputs@{ self, ... }:

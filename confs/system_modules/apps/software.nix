@@ -16,6 +16,7 @@
         swww                            # interactive wallpaper
         ffmpeg                          # Media codec
         fastfetch                       # its fun
+	starship
 
         # File Manager
         yazi                            # Terminal file manager
@@ -32,7 +33,6 @@
         wl-clipboard                    # Clipboard functionality
         wlogout                         # logout function
         hyprlock
-        hyprpaper
         hypridle
 
         # Apps
@@ -43,7 +43,8 @@
         noto-fonts-cjk-sans
         noto-fonts-cjk-serif
         noto-fonts-emoji
-	    font-awesome
+	font-awesome
+	nerd-fonts.symbols-only
         texlivePackages.japanese-otf
         fira-sans
         fira-code
