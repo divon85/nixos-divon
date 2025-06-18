@@ -1,20 +1,52 @@
+{ pkgs, ... }:
 {
-    # Enable CUPS to print documents
-    services.printing.enable = true;
+    services = {
+        # Enable CUPS to print documents
+        printing.enable = true;
+
+        # Enable the OpenSSH daemon
+        openssh.enable = true;
+
+        # Enable vscode-server
+        vscode-server.enable = true;
+
+        # keyring
+        gnome.gnome-keyring.enable = true;
+
+        # enable trash
+        gvfs.enable = true;
+
+        # login
+        # xserver = {
+        #         displayManager.sddm = {
+        #         enable = true;
+        #         wayland.enable = true;
+        #         enableHidpi = true;
+        #         theme = "chili";
+        #         package = pkgs.sddm;
+        #         excludePackages = [ pkgs.xterm ];
+        #         xkb = {
+        #             layout = "jp";
+        #             variant = "";
+        #             options = "caps:escape";
+        #         };
+        #     };
+        # };
+
+        dbus = {
+            enable = true;
+            packages = [ pkgs.dconf ];
+        };
+
+        pipewire = {
+            enable = true;
+            alsa.enable = true;
+            alsa.support32Bit = true;
+            pulse.enable = true;
+            jack.enable = true;
+        }
+    };
 
     # Enable bluetooth
     hardware.bluetooth.enable = true;
-
-    # Enable the OpenSSH daemon
-    services.openssh.enable = true;
-
-    # Enable vscode-server
-    services.vscode-server.enable = true;
-
-    # keyring
-    services.gnome.gnome-keyring.enable = true;
-    security.pam.services.gdm-password.enableGnomeKeyring = true;
-
-    # enable trash
-    services.gvfs.enable = true;
 }

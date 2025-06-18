@@ -35,6 +35,7 @@
         name = "Igor Novid";
         email = "igornovid@outlook.com";
         dotfilesDir = "~/.dotfiles";
+        theme = "io";
     };
 
     lib = inputs.nixpkgs.lib;

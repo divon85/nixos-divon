@@ -1,5 +1,16 @@
 {inputs, pkgs, ... }:
 {
+    imports = [
+        ./dbus.nix
+    ];
+
+    # Security
+    security = {
+        pam.services.login.enableGnomeKeyring = true;
+        pam.services.gdm-password.enableGnomeKeyring = true;
+        rtkit.enable = true;
+    };
+
     programs.hyprland = {
         enable = true;
         # set the flake package
