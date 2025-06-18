@@ -37,5 +37,5 @@
             hi NormalFloat ctermbg=NONE ctermfg=NONE guibg=NONE
             hi TabLine ctermbg=None ctermfg=None guibg=None
         '';
-    }
+    };
 }
