@@ -45,6 +45,14 @@
             pulse.enable = true;
             jack.enable = true;
         };
+
+        xserver = {
+            xkg = {
+                layout = "jp106";
+                xkbVariant = "";
+                xkbOptions = "caps:escape";
+            }
+        }
     };
 
     # Enable bluetooth

@@ -12,5 +12,6 @@
         fira-code-symbols
         roboto
         liberation_ttf
+        texlivePackages.japanese-otf
     ];
 }
