@@ -42,6 +42,7 @@
         # Programming Language
         libgcc
         julia
+        conda
 
         
         # Fonts
