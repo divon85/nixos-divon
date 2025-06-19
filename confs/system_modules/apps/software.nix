@@ -38,6 +38,11 @@
         # Apps
         firefox                         # Web browser
         grimblast                       # Screenshot tools
+
+        # Programming Language
+        libgcc
+        julia
+
         
         # Fonts
         noto-fonts-cjk-sans
