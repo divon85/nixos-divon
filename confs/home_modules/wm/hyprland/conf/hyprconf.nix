@@ -18,7 +18,6 @@
             }
 
             # Execute your favorite apps at launch
-            exec-once = waybar
             exec-once = hyprpaper
             exec-once = dunst
 

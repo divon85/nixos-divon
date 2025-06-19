@@ -40,14 +40,14 @@
         grimblast                       # Screenshot tools
 
         # Fonts
-        noto-fonts-cjk-sans
-        noto-fonts-cjk-serif
-        noto-fonts-emoji
-        font-awesome
-        nerd-fonts.symbols-only
+        # noto-fonts-cjk-sans
+        # noto-fonts-cjk-serif
+        # noto-fonts-emoji
+        # font-awesome
+        # nerd-fonts.symbols-only
         texlivePackages.japanese-otf
-        fira-sans
-        fira-code
+        # fira-sans
+        # fira-code
     ];
 
     programs.firefox.enable = true;
