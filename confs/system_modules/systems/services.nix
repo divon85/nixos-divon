@@ -16,23 +16,6 @@
         # enable trash
         gvfs.enable = true;
 
-        # login
-        # xserver = {
-        #         displayManager.sddm = {
-        #         enable = true;
-        #         wayland.enable = true;
-        #         enableHidpi = true;
-        #         theme = "chili";
-        #         package = pkgs.sddm;
-        #         excludePackages = [ pkgs.xterm ];
-        #         xkb = {
-        #             layout = "jp";
-        #             variant = "";
-        #             options = "caps:escape";
-        #         };
-        #     };
-        # };
-
         dbus = {
             enable = true;
             packages = [ pkgs.dconf ];
@@ -47,12 +30,10 @@
         };
 
         xserver = {
-            xkg = {
-                layout = "jp106";
-                xkbVariant = "";
-                xkbOptions = "caps:escape";
-            }
-        }
+            xkb.layout = "jp106";
+            xkbVariant = "";
+            xkbOptions = "caps:escape";
+        };
     };
 
     # Enable bluetooth
