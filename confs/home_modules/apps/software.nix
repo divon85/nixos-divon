@@ -1,6 +1,8 @@
 { pkgs, ... }:
 {
     home.packages = with pkgs; [
+        # Editor
+        vscodium
 
         # Fonts
         noto-fonts-cjk-sans

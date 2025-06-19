@@ -1,10 +1,11 @@
 { inputs, ... }:
 {
     imports = [
+        ./apps/starship/starship.nix
+        ./apps/vscode/vscode.nix
         ./apps/nvim.nix
         ./apps/shells.nix
         ./apps/software.nix
-        ./apps/starship/starship.nix
         ./style/stylix.nix
         ./system/icons.nix
         ./system/xdgs.nix
