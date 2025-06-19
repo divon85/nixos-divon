@@ -1,6 +1,9 @@
 { pkgs, ... }:
 {
     home.packages = with pkgs; [
+        # Games
+        retroarch
+
         # Fonts
         noto-fonts-cjk-sans
         noto-fonts-cjk-serif
