@@ -1,8 +1,9 @@
 { inputs, ... }:
 {
     imports = [
-        ./apps/shells.nix
         ./apps/nvim.nix
+        ./apps/shells.nix
+        ./apps/starship.nix
         ./style/stylix.nix
         ./system/icons.nix
         ./system/xdgs.nix

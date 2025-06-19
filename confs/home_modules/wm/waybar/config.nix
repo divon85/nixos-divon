@@ -1,7 +1,7 @@
 {
     programs.waybar = {
         settings = [{
-            "height" = 24;
+            "height" = 25;
             "spacing" = 4;
             modules-left = [
                 "hyprland/workspaces"

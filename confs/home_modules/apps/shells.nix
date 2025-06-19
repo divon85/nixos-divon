@@ -21,6 +21,8 @@ in
         enableCompletion = true;
         shellAliases = zshAliases;
         initContent = ''
+            eval "$(starship init zsh)"
+
             if [ -f ~/.zsh_history ]; then
                 alias histc='rm ~/.zsh_history && history -c'
             else
