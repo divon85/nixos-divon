@@ -21,8 +21,9 @@ in
         syntaxHighlighting.enable = true;
         enableCompletion = true;
         shellAliases = zshAliases;
-        histSize = 10000;
-        histFile = "~/.zsh_history";
+        history.size = 10000;
+        history.save = 10000;
+        history.path = "$HOME/.zsh_history";
         initContent = ''
             eval "$(starship init zsh)"
 
