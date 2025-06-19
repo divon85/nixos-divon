@@ -12,6 +12,7 @@ zshAliases = {
     wifi = "nmtui";
     upflake = "sudo nixos-rebuild switch --flake ~/.dotfiles";
     uphome = "home-manager switch --flake ~/.dotfiles";
+    cgrbg = "sudo nix-collect-garbage -d";
     histc = "rm ~/.zsh_history";
 };
 
