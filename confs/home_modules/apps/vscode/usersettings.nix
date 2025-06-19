@@ -22,6 +22,7 @@
             "workbench.colorTheme" = "Stylix";
             "workbench.iconTheme" = "vscode-icons";
             "workbench.startupEditor" = "none";
+            "git.autofetch" = "true";
         };
     };
 }
