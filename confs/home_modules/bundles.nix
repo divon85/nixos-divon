@@ -4,7 +4,7 @@
         ./apps/starship/starship.nix
         ./apps/vscode/vscode.nix
         ./apps/nvim.nix
-        ./apps/shells.nix
+        ./apps/shell.nix
         ./apps/software.nix
         ./style/stylix.nix
         ./system/icons.nix

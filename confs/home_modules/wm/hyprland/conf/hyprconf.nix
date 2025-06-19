@@ -25,7 +25,7 @@
             bind = SUPER, RETURN, exec, alacritty # Open Alactritty
             bind = SUPER, Q, killactive # Close current window
             bind = SUPER CTRL, Q, exec, ~/.dotfiles/scripts/logout.sh # Close current window
-            bind = SUPER, M, exit # Exit Hyprland
+            bind = SUPER, C, exec, code # Open VSCode
             bind = SUPER, E, exec, ~/.dotfiles/scripts/filemanager.sh # Opens the filemanager
             bind = SUPER, T, togglefloating # Toggle between tiling and floating window
             bind = SUPER, F, fullscreen # Open the window in fullscreen
@@ -177,7 +177,7 @@
             }
 
             # See https://wiki.hyprland.org/Configuring/Monitors/
-            monitor=,preferred,auto,auto
+            monitor=,1920x1080@60,auto,auto
         '';
     };
 }
