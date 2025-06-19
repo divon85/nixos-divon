@@ -30,7 +30,7 @@
         };
 
         xserver = {
-            xkb.layout = "jp106";
+            xkb.layout = "jp";
             xkbVariant = "";
             xkbOptions = "caps:escape";
         };
