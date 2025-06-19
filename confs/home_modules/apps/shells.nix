@@ -12,6 +12,7 @@ zshAliases = {
     wifi = "nmtui";
     upflake = "sudo nixos-rebuild switch --flake ~/.dotfiles";
     uphome = "home-manager switch --flake ~/.dotfiles";
+    histc = "rm ~/.zsh_history";
 };
 
 in
@@ -25,20 +26,20 @@ in
         shellAliases = zshAliases;
         history.size = 10000;
         history.save = 10000;
-        history.path = "$HOME/.zsh_history";
+        dotDir = ".config/zsh";
+        history = {
+            expireDuplicatesFirst = true;
+            path = "$HOME/.zsh_history";
+            ignoreAllDups = true;
+            saveNoDups = true;
+        };
         initContent = ''
             eval "$(starship init zsh)"
 
             if [ -f ~/.zsh_history ]; then
-                alias histc='rm ~/.zsh_history && history -c'
+                alias turnoff='sudo shutdown -h now && rm ~/.zsh_history'
             else
-                alias histc='history -c'
-            fi
-
-            if [ -f ~/.zsh_history ]; then
-                alias turnoff='rm ~/.zsh_history && history -c && sudo shutdown -h now'
-            else
-                alias turnoff='history -c && sudo shutdown -h now'
+                alias turnoff='sudo shutdown -h now'
             fi
 
             if [[ $(tty) == *"pts"* ]]; then
