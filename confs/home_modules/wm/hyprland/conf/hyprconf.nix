@@ -24,8 +24,8 @@
             # Example binds, see https://wiki.hyprland.org/Configuring/Binds/ for more
             bind = SUPER, RETURN, exec, alacritty # Open Alactritty
             bind = SUPER, Q, killactive # Close current window
-            bind = SUPER CTRL, Q, exec, ~/.dotfiles/scripts/logout.sh # Close current window
-            bind = SUPER, C, exec, code # Open VSCode
+            bind = SUPER, L, exec, ~/.dotfiles/scripts/logout.sh # Close current window
+            bind = SUPER, C, exec, ~/.dotfiles/scripts/editor.sh # Open text editor
             bind = SUPER, E, exec, ~/.dotfiles/scripts/filemanager.sh # Opens the filemanager
             bind = SUPER, T, togglefloating # Toggle between tiling and floating window
             bind = SUPER, F, fullscreen # Open the window in fullscreen
