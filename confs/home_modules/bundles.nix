@@ -3,6 +3,7 @@
     imports = [
         ./apps/nvim.nix
         ./apps/shells.nix
+        ./apps/software.nix
         ./apps/starship/starship.nix
         ./style/stylix.nix
         ./system/icons.nix
