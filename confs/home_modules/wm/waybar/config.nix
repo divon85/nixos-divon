@@ -13,7 +13,6 @@
                 "network"
             ];
             "hyprland/workspaces" = {
-                on-click = activate;
                 active-only = false;
                 all-outputs = true;
                 format = {};
