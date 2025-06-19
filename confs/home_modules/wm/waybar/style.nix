@@ -13,7 +13,7 @@
                 opacity: 0.9;
                 background: rgba(30, 31, 41, 230);
                 color: #f8f8f2;
-                border-botom: 2px solid #282a36;
+                border-bottom: 2px solid #282a36;
             }
             #workspaces button {
                 padding: 0 10px;
