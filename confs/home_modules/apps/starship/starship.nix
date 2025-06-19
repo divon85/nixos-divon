@@ -34,7 +34,6 @@
             # scan_timeout = 30;
             format = "[](#9A348E)$username$hostname$directory$git_branc$git_status$cmd_duration$time$line_break$character";
             add_newline = false;
-
         };
     };
 }

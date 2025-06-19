@@ -10,6 +10,8 @@ zshAliases = {
     vs = "sudo neovim";
     relob = "source ~/.zshrc";
     wifi = "nmtui";
+    upflake = "sudo nixos-rebuild switch --flake ~/.dotfiles";
+    uphome = "home-manager switch --flake ~/.dotfiles";
 };
 
 in

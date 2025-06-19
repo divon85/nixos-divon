@@ -5,8 +5,8 @@
                 disabled = false;
                 fish_style_pwd_dir_length = 0;
                 format = "[$path]($style)[$read_only]($read_only_style) ";
-                home_symbol = "~";
-                read_only = " ";
+                home_symbol = " ";
+                read_only = " ";
                 read_only_style = "red";
                 repo_root_format = "[$before_root_path]($style)[$repo_root]($repo_root_style)[$path]($style)[$read_only]($read_only_style) ";
                 style = "cyan bold bg:0xDA627D";
@@ -19,16 +19,16 @@
             directory.substitutions = {
                 # Here is how you can shorten some long paths by text replacement;
                 # similar to mapped_locations in Oh My Posh:;
-                "Documents" = " ";
+                "Documents" = " ";
                 "Downloads" = " ";
                 "Music" = " ";
-                "Pictures" = " ";
+                "Pictures" = " ";
                 # Keep in mind that the order matters. For example:;
                 # "Important Documents" = "  ";
                 # will not be replaced, because "Documents" was already substituted before.;
                 # So either put "Important Documents" before "Documents" or use the substituted version:;
                 # "Important  " = "  ";
-                "Important " = " ";
+                "Important " = " ";
             };
         };
     };
