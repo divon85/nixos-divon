@@ -12,5 +12,5 @@
         fira-code-symbols
         roboto
         liberation_ttf
-    ]
+    ];
 }
