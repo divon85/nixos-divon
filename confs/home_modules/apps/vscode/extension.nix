@@ -1,7 +1,7 @@
 { pkgs, ... }:
 {
     programs.vscode = {
-        extension = [
+        profiles.default.extensions = [
             pkgs.vscode-extensions.aaron-bond.better-comments
             pkgs.vscode-extensions.yzhang.markdown-all-in-one
             pkgs.vscode-extensions.ms-vscode.cpptools
@@ -16,6 +16,7 @@
             pkgs.vscode-extensions.ms-toolsai.jupyter-renderers
             pkgs.vscode-extensions.ms-toolsai.jupyter-keymap
             pkgs.vscode-extensions.vscode-icons-team.vscode-icons
+            pkgs.vscode-extensions.github.vscode-pull-request-github
             pkgs.vscode-extensions.yzane.markdown-pdf
         ];
     };

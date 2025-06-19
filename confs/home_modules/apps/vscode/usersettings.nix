@@ -1,6 +1,7 @@
 {
     programs.vscode = {
-        userSettings = {
+        profiles.default.userSettings = {
+            "files.autoSave" = "off";
             "[nix]"."editor.tabSize" = 4;
         };
     };

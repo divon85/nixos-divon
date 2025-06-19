@@ -2,7 +2,7 @@
 {
     home.packages = with pkgs; [
         # Editor
-        vscodium
+        vscode
 
         # Fonts
         noto-fonts-cjk-sans
