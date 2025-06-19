@@ -29,10 +29,10 @@
             jack.enable = true;
         };
 
-        xserver = {
-            xkb.layout = "jp";
-            xkbVariant = "";
-            xkbOptions = "caps:escape";
+        xserver.xkb = {
+            layout = "jp106";
+            variant = "";
+            options = "caps:escape";
         };
     };
 
