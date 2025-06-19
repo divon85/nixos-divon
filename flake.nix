@@ -35,9 +35,6 @@
         name = "Igor Novid";
         email = "igornovid@outlook.com";
         dotfilesDir = "~/.dotfiles";
-        font = "Intel One Mono"; # Selected font
-        fontPkg = pkgs.intel-one-mono; # Font package
-        theme = "io";
     };
 
     lib = inputs.nixpkgs.lib;
