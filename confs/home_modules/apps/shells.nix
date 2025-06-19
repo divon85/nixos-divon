@@ -16,10 +16,13 @@ in
 {
     programs.zsh = {
         enable = true;
+        autocd = true;
         autosuggestion.enable = true;
         syntaxHighlighting.enable = true;
         enableCompletion = true;
         shellAliases = zshAliases;
+        histSize = 10000;
+        histFile = "~/.zsh_history";
         initContent = ''
             eval "$(starship init zsh)"
 
