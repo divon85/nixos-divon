@@ -3,7 +3,7 @@
         settings = {
             git_branch = {
                 format = "[$symbol$branch(:$remote_branch)]($style) ";
-                symbol = " ";
+                symbol = " ";
                 style = "bold purple bg:0xFCA17D";
                 truncation_length = 9223372036854775807;
                 truncation_symbol = "…";
@@ -47,7 +47,7 @@
                 deleted = "🗑";
                 disabled = false;
                 diverged = "😵";
-                format = "([[$all_status$ahead_behind]]($style) )";
+                # format = "([[$all_status$ahead_behind]]($style) )";
                 ignore_submodules = false;
                 modified = "📝";
                 renamed = "👅";
