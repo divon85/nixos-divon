@@ -19,6 +19,8 @@
                 XDG_DOTFILES_DIR = "${config.home.homeDirectory}/.dotfiles";
                 XDG_BOOK_DIR = "${config.home.homeDirectory}/Documents/Books";
                 XDG_PROJECT_DIR = "${config.home.homeDirectory}/Documents/Projects";
+                XDG_CONFIG_HOME = "${config.home.homeDirectory}/.config";
+                XDG_RETROARCH_HOME = "${config.home.homeDirectory}/.config/retroarch";
             };
         };
     };
