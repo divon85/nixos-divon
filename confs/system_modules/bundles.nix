@@ -4,6 +4,7 @@
         ./apps/software.nix
         ./apps/thunar.nix
         ./style/stylix.nix
+        ./systems/automaton.nix
         ./systems/bootloader.nix
         ./systems/networking.nix
         ./systems/services.nix
