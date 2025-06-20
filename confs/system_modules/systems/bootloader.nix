@@ -1,5 +1,12 @@
+{ systemSettings, ... }:
 {
-    # Bootloader.
-    boot.loader.systemd-boot.enable = true;
-    boot.loader.efi.canTouchEfiVariables = true;
+    # Bootloader GPT
+    boot.loader.systemd-boot.enable = if(systemSettings.bootMode == "uefi") then true else false;
+    boot.loader.efi.canTouchEfiVariables = if(systemSettings.bootMode == "uefi") then true else false;
+    boot.loader.efi.efiSysMountPoint = systemSettings.bootMountPath;
+
+    # Bootloader MBR
+    boot.loader.grub.enable = if(systemSettings.bootMode == "uefi") then false else true;
+    boot.loader.grub.device = systemSettings.grubDevice;
+    boot.loader.grub.useOSProber = if(systemSettings.bootMode == "uefi") then false else true;
 }

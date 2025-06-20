@@ -17,6 +17,7 @@
         ffmpeg                          # Media codec
         fastfetch                       # its fun
         starship
+        xarchiver
 
         # File Manager
         yazi                            # Terminal file manager
