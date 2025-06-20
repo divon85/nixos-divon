@@ -1,4 +1,4 @@
-{ userSettings, ... }:
+{ inputs, userSettings, ... }:
 {
     # Automatic updating
     system.autoUpgrade = {
