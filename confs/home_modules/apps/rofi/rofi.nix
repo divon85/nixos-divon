@@ -97,7 +97,7 @@ let
         "custom"
     else
         cfg.theme;
-{
+in {
     programs.rofi = {
         enable = true;
         font = "DejaVu Sans Mono 10";

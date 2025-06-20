@@ -1,6 +1,7 @@
 { inputs, ... }:
 {
     imports = [
+        ./apps/rofi/rofi.nix
         ./apps/starship/starship.nix
         ./apps/vscode/vscode.nix
         ./apps/nvim.nix
