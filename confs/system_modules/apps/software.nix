@@ -45,10 +45,6 @@
         libgcc
         julia
         conda
-        jdk8
-        jdk8_headless
-        jre8
-        jre8_headless
 
 
         
@@ -69,5 +65,4 @@
     programs.firefox.enable = true;
     programs.zsh.enable = true;
     programs.nix-ld.enable = true;
-    programs.java.enable = true;
 }
