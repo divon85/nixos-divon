@@ -10,7 +10,6 @@
             "nixpkgs"
             "-L" #print build logs
         ];
-        randomizeDelaySec = "45min";
     };
 
     # Automatic cleanup
