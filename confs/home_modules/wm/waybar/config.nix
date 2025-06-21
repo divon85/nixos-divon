@@ -8,9 +8,11 @@
             ];
             modules-right = [
                 "pulseaudio"
+                "backlight"
                 "bluetooth"
                 "battery"
                 "network"
+                "clock"
             ];
             "hyprland/workspaces" = {
                 "active-only" = false;
@@ -18,7 +20,7 @@
                 "format" = {};
                 "persistent-workspaces" = 1;
             };
-            pulseaudio = {
+            "pulseaudio" = {
                 "format" = "{icon}  {volume}%";
                 "format-bluetooth" = "{volume}% {icon} {format_source}";
                 "format-bluetooth-muted" = " {icon} {format_source}";
@@ -34,6 +36,10 @@
                     "car" = " ";
                     "default" = [" " " " " "];
                 };
+            };
+            "backlight" = {
+                "format" = "{percent}% {icon}";
+                "format-icons" = ["" "" "" "" "" "" "" "" ""];
             };
             "bluetooth" = {
                 "format" = " {status}";
@@ -64,6 +70,10 @@
                 "tooltip-format-ethernet" = " {ifname}\nIP: {ipaddr}\n up: {bandwidthUpBits} down: {bandwidthDownBits}";
                 "tooltip-format-disconnected" = "Disconnected";
                 "max-length" = 50;
+            };
+            "clock" = {
+                "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+                "format-alt": "{:%Y-%m-%d}"
             };
         }];
     };

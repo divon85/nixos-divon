@@ -39,6 +39,11 @@
         # Apps
         firefox                         # Web browser
         grimblast                       # Screenshot tools
+        jre8
+        jre8_headless
+        jdk8
+        jdk8_headless
+
 
 
         # Programming Language
