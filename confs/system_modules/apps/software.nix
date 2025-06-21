@@ -16,8 +16,9 @@
         hyprpaper                       # wallpaper
         ffmpeg                          # Media codec
         fastfetch                       # its fun
-        starship
-        xarchiver
+        ntfs3g                          # mount and write ntfs drive
+        starship                        # terminal styling
+        xarchiver                       # extract, create, and editing archived files
 
         # File Manager
         yazi                            # Terminal file manager
@@ -33,8 +34,8 @@
         rofi-wayland                    # Application launcher
         wl-clipboard                    # Clipboard functionality
         wlogout                         # logout function
-        hyprlock
-        hypridle
+        hyprlock                        # lockscreen in hyprland
+        hypridle                        # enable sleep when idling in hyprland
 
         # Apps
         firefox                         # Web browser
@@ -43,12 +44,10 @@
 
 
         # Programming Language
-        libgcc
-        julia
+        libgcc                          # C and C++
+        julia                           # Julia programming
         conda
 
-
-        
         # Fonts
         noto-fonts-cjk-sans
         noto-fonts-cjk-serif

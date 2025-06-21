@@ -8,4 +8,7 @@
     boot.loader.grub.enable = if(systemSettings.bootMode == "uefi") then false else true;
     boot.loader.grub.device = systemSettings.grubDevice;
     boot.loader.grub.useOSProber = if(systemSettings.bootMode == "uefi") then false else true;
+
+    # Mount NTFS
+    boot.supportedFilesystems = [ "ntfs" ];
 }
