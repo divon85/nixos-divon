@@ -28,6 +28,7 @@
             "julia.enableTelemetry" = "false";
             "terminal.integrated.inheritEnv" = "false";
             "explorer.confirmDelete" = "false";
+            "git.enableSmartCommit" = "true";
         };
     };
 }
