@@ -35,5 +35,9 @@
             popups = 1.0;
         };
         polarity = "dark";
+        cursor = {
+            name = "Bibata-Modern-Ice";
+            package = pkgs.bibata-cursors;
+        };
     };
 }

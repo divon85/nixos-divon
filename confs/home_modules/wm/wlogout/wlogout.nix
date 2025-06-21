@@ -23,7 +23,7 @@
         {
             label = "reboot";
             action = "reboot";
-            text = "eboot";
+            text = "Reboot";
             keybind = "r";
         }
         ];
