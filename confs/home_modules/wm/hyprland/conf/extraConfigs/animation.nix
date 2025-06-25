@@ -1,7 +1,6 @@
 {
     wayland.windowManager.hyprland = {
         extraConfig = ''
-
             # Some default animations, see https://wiki.hyprland.org/Configuring/Animations/ for more
             animations {
                 enabled = true
