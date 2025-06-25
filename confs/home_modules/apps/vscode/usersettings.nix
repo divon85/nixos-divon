@@ -23,7 +23,7 @@
             "workbench.iconTheme" = "vscode-icons";
             "workbench.startupEditor" = "none";
             "git.autofetch" = "true";
-            "git.enableSmartCommit" = "true";
+            "git.enableSmartCommit" = true;
             "git.confirmSync" = "false";
             "terminal.integrated.commandsToSkipShell" = [ "language-julia.interrupt" ];
             "julia.symbolCacheDownload" = "true";
