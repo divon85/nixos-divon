@@ -19,6 +19,9 @@
         ntfs3g                          # mount and write ntfs drive
         starship                        # terminal styling
         xarchiver                       # extract, create, and editing archived files
+        brightnessctl                   # Adjust screen brightness
+        pipewire                        # Sound
+        pwvucontrol                     # Pipewire volume control
 
         # File Manager
         yazi                            # Terminal file manager
@@ -40,6 +43,7 @@
         # Apps
         firefox                         # Web browser
         grimblast                       # Screenshot tools
+        hakuneko                        # Manga downloader
 
 
 
