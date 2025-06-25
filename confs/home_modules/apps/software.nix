@@ -8,7 +8,6 @@
             genesis-plus-gx
             swanstation
         ]))
-        airshipper
 
         # Editor
         vscode
