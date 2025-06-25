@@ -43,7 +43,6 @@
         # Apps
         firefox                         # Web browser
         grimblast                       # Screenshot tools
-        hakuneko                        # Manga downloader
 
 
 
