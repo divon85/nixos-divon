@@ -30,6 +30,9 @@
             "explorer.confirmDelete" = "false";
             "git.enableSmartCommit" = "true";
             "editor.wordWrap" = "on";
+            "editor.acceptSuggestionOnEnter" = "off";
+            "extensions.autoUpdate" = "false";
+            "telemetry.telemetryLevel" = "off";
         };
     };
 }

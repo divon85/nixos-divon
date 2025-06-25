@@ -50,6 +50,12 @@
         libgcc                          # C and C++
         julia                           # Julia programming
         conda
+        jdks = [
+            graalvm-ce
+            zulu8
+            zulu17
+            zulu
+        ]
 
         # Fonts
         noto-fonts-cjk-sans

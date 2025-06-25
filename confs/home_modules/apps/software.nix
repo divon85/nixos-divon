@@ -8,6 +8,7 @@
             genesis-plus-gx
             swanstation
         ]))
+        prismlauncher
 
         # Editor
         vscode
