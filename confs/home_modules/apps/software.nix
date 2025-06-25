@@ -8,14 +8,6 @@
             genesis-plus-gx
             swanstation
         ]))
-        (prismlauncher.override {
-            jdks = [
-                graalvm-ce
-                zulu8
-                zulu17
-                zulu
-            ];
-        })
 
         # Editor
         vscode
