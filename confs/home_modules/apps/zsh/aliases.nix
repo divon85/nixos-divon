@@ -19,5 +19,5 @@ let
 
 in
 {
-    programs.zsh.shellAliases = { zshAliases };
+    programs.zsh.shellAliases = zshAliases;
 }
