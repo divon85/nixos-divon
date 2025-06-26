@@ -1,6 +1,6 @@
-{ lib, inputs, userSettings, pkgs, ... }:
-{
+{ inputs, pkgs, lib, options, systemSettings, userSettings, ... }: {
     imports = [
+        ./hardware-configuration.nix
         ./apps/software.nix
         ./apps/thunar.nix
         ./style/stylix.nix
@@ -36,4 +36,5 @@
 
     # Allow unfree packages
     nixpkgs.config.allowUnfree = true;
+}
 }

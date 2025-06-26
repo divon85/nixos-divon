@@ -52,7 +52,7 @@
             igor-nixos = lib.nixosSystem {
                 system = systemSettings.architecture;
                 modules = [
-                    ./confs/configuration.nix
+                    ./confs/system_modules/configuration.nix
                     ];
                 specialArgs = {
                     inherit systemSettings;
@@ -66,7 +66,7 @@
             igor = inputs.home-manager.lib.homeManagerConfiguration {
                 inherit pkgs;
                 modules = [
-                    ./confs/home.nix
+                    ./confs/user_modules/home.nix
                 ];
                 extraSpecialArgs = {
                     inherit systemSettings;

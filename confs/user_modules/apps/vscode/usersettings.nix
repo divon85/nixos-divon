@@ -34,6 +34,7 @@
             "editor.acceptSuggestionOnEnter" = "off";
             "extensions.autoUpdate" = "false";
             "telemetry.telemetryLevel" = "off";
+            "explorer.confirmDragAndDrop" = "false";
         };
     };
 }

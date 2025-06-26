@@ -1,5 +1,10 @@
-{ inputs, ... }:
+{ pkgs, userSettings, inputs, ... }:
 {
+    home.username = userSettings.username;
+    home.homeDirectory = "/home/"+userSettings.username;
+
+    programs.home-manager.enable = true;
+
     imports = [
         ./apps/rofi/rofi.nix
         ./apps/starship/starship.nix
@@ -15,4 +20,6 @@
         ./wm/waybar/waybar.nix
         inputs.stylix.homeModules.stylix
     ];
+
+    home.stateVersion = "25.05";
 }
