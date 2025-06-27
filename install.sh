@@ -5,6 +5,7 @@
 ## Copy downloaded files to the dotfiles directory
 ### Check directory
 ## Credit to Librephoenix
+INSTALLER_DIR="$(dirname "$(realpath "$0")")"
 if [ $# -gt 0 ]
     then
         SCRIPT_DIR=$1
@@ -22,9 +23,9 @@ fi
 ## Credit to MyLinux4Work
 echo "Copying files to $SCRIPT_DIR"
 if [ -f excludes.txt ]; then
-    rsync -avhp -I --exclude-from=excludes.txt . "$SCRIPT_DIR"
+    rsync -avhp -I --exclude-from=excludes.txt "$INSTALLER_DIR" "$SCRIPT_DIR"
 else
-    rsync -avhp -I . "$SCRIPT_DIR"
+    rsync -avhp -I "$INSTALLER_DIR" "$SCRIPT_DIR"
 fi
 
 ## Check bootloader
@@ -66,9 +67,4 @@ sudo nixos-rebuild switch --flake "$SCRIPT_DIR#nixhost"
 ## Install home-manager
 ## Credit to Librephoenix
 echo "Installing home-manager"
-if ! command -v home-manager &> /dev/null; then
-    nix run home-manager/master --extra-experimental-features 'nix-command flakes' -- switch --flake "$SCRIPT_DIR#nixuser"
-else
-    echo "Home-manager is already installed, skipping installation."
-    nixos home-manager switch --flake "$SCRIPT_DIR#nixuser"
-fi
+nix run home-manager/master --extra-experimental-features 'nix-command flakes' -- switch --flake "$SCRIPT_DIR#nixuser"
