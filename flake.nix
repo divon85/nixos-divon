@@ -49,7 +49,7 @@
 
     in {
         nixosConfigurations = {
-            igor-nixos = lib.nixosSystem {
+            nixhost = lib.nixosSystem {
                 system = systemSettings.architecture;
                 modules = [
                     ./confs/system_modules/configuration.nix
@@ -63,7 +63,7 @@
         };
 
         homeConfigurations = {
-            igor = inputs.home-manager.lib.homeManagerConfiguration {
+            nixuser = inputs.home-manager.lib.homeManagerConfiguration {
                 inherit pkgs;
                 modules = [
                     ./confs/user_modules/home.nix
