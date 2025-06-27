@@ -1,0 +1,7 @@
+excludes.txt
+.gitignore
+.git
+install.sh
+README.md
+flake.lock
+hardware-configuration.nix
