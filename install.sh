@@ -22,10 +22,10 @@ fi
 ### Copy files
 ## Credit to MyLinux4Work
 echo "Copying files to $SCRIPT_DIR"
-if [ -f excludes.txt ]; then
-    rsync -avhp -I --exclude-from=excludes.txt "$INSTALLER_DIR" "$SCRIPT_DIR"
+if [ -f "$INSTALLER_DIR/"excludes.txt ]; then
+    rsync -avhp -I --exclude-from=excludes.txt "$INSTALLER_DIR/." "$SCRIPT_DIR"
 else
-    rsync -avhp -I "$INSTALLER_DIR" "$SCRIPT_DIR"
+    rsync -avhp -I "$INSTALLER_DIR/." "$SCRIPT_DIR"
 fi
 
 ## Check bootloader
