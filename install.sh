@@ -29,7 +29,7 @@ fi
 
 ## Check bootloader
 ## Credit to Librephoenix
-if [ -d /sys/firmware/evi/efivars ]; then
+if [ -d /sys/firmware/efi/efivars ]; then
     sed -i "0,/bootMode.*=.*\".*\";/s//bootMode = \"uefi\";/" $SCRIPT_DIR/flake.nix
 else
     sed -i "0,/bootMode.*=.*\".*\";/s//bootMode = \"bios\";/" $SCRIPT_DIR/flake.nix
