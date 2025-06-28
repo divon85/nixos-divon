@@ -22,6 +22,9 @@
         brightnessctl                   # Adjust screen brightness
         pipewire                        # Sound
         pwvucontrol                     # Pipewire volume control
+        celluloid                       # Video player
+        evince                          # pdf viewer
+
 
         # File Manager
         yazi                            # Terminal file manager

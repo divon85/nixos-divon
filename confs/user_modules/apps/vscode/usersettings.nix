@@ -22,19 +22,19 @@
             "workbench.colorTheme" = "Stylix";
             "workbench.iconTheme" = "vscode-icons";
             "workbench.startupEditor" = "none";
-            "git.autofetch" = "true";
+            "git.autofetch" = true;
             "git.enableSmartCommit" = true;
-            "git.confirmSync" = "false";
+            "git.confirmSync" = false;
             "terminal.integrated.commandsToSkipShell" = [ "language-julia.interrupt" ];
-            "julia.symbolCacheDownload" = "true";
-            "julia.enableTelemetry" = "false";
-            "terminal.integrated.inheritEnv" = "false";
-            "explorer.confirmDelete" = "false";
+            "julia.symbolCacheDownload" = true;
+            "julia.enableTelemetry" = false;
+            "terminal.integrated.inheritEnv" = false;
+            "explorer.confirmDelete" = false;
             "editor.wordWrap" = "on";
             "editor.acceptSuggestionOnEnter" = "off";
-            "extensions.autoUpdate" = "false";
+            "extensions.autoUpdate" = false;
             "telemetry.telemetryLevel" = "off";
-            "explorer.confirmDragAndDrop" = "false";
+            "explorer.confirmDragAndDrop" = false;
         };
     };
 }

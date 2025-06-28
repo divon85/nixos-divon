@@ -6,18 +6,20 @@
     programs.home-manager.enable = true;
 
     imports = [
+        ./apps/retroarch/retroarch.nix
         ./apps/rofi/rofi.nix
         ./apps/starship/starship.nix
         ./apps/vscode/vscode.nix
-        ./apps/nvim.nix
-        ./apps/software.nix
         ./apps/yazi/yazi.nix
         ./apps/zsh/zsh.nix
+        ./apps/nvim.nix
+        ./apps/software.nix
         ./style/stylix.nix
         ./system/icons.nix
         ./system/xdgs.nix
         ./wm/hyprland/hyprland.nix
         ./wm/waybar/waybar.nix
+        ./wm/wlogout/wlogout.nix
         inputs.stylix.homeModules.stylix
     ];
 
