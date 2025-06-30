@@ -6,7 +6,6 @@
     programs.home-manager.enable = true;
 
     imports = [
-        ./apps/retroarch/retroarch.nix
         ./apps/rofi/rofi.nix
         ./apps/starship/starship.nix
         ./apps/vscode/vscode.nix

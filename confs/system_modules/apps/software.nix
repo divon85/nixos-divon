@@ -24,7 +24,7 @@
         celluloid                       # Video player
         evince                          # pdf viewer
         file                            # Program that shows the type of files
-        7-zip                           # Archive extraction and preview
+        p7zip                           # Archive extraction and preview
         jq                              # JSON preview
         poppler                         # PDF viewer
         fd                              # Fast file search
