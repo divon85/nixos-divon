@@ -1,8 +1,8 @@
 {
     stylix.targets.yazi.enable = true;
     imports = [
+        ./manager.nix
         ./preview.nix
-        ./settings.nix
         ./tasks.nix
     ];
     programs.yazi = {

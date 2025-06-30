@@ -18,12 +18,21 @@
         fastfetch                       # its fun
         ntfs3g                          # mount and write ntfs drive
         starship                        # terminal styling
-        xarchiver                       # extract, create, and editing archived files
         brightnessctl                   # Adjust screen brightness
         pipewire                        # Sound
         pwvucontrol                     # Pipewire volume control
         celluloid                       # Video player
         evince                          # pdf viewer
+        file                            # Program that shows the type of files
+        7-zip                           # Archive extraction and preview
+        jq                              # JSON preview
+        poppler                         # PDF viewer
+        fd                              # Fast file search
+        ripgrep                         # Fast text search
+        fzf                             # Fuzzy finder
+        zoxide                          # Fuzzy finder for command history
+        resvg                           # SVG rendering library
+        imagemagick                     # Image manipulation
 
 
         # File Manager
