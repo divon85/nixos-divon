@@ -17,8 +17,8 @@
         ./system/icons.nix
         ./system/xdgs.nix
         ./wm/hyprland/hyprland.nix
+        ./wm/hyprland/hyprlock.nix
         ./wm/waybar/waybar.nix
-        ./wm/wlogout/wlogout.nix
         inputs.stylix.homeModules.stylix
     ];
 
