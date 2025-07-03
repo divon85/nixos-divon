@@ -24,5 +24,8 @@
         roboto
         liberation_ttf
         texlivePackages.japanese-otf
+
+        # Utilities
+        yazi
     ];
 }
