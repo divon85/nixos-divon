@@ -13,7 +13,6 @@
         zsh                             # Shell engine
         wpgtk                           # Color scheming
         python3                         # still need comment?
-        hyprpaper                       # wallpaper
         ffmpeg                          # Media codec
         fastfetch                       # its fun
         ntfs3g                          # mount and write ntfs drive
@@ -43,6 +42,7 @@
         xfce.tumbler                    # For Thunar thumbnails
         ffmpegthumbnailer               # For video thumbnails
         gvfs                            # For trash support, mounts
+        celluloid
 
         # Hyprland utils
         waybar                          # Status bar
@@ -51,6 +51,7 @@
         wlogout                         # logout function
         hyprlock                        # lockscreen in hyprland
         hypridle                        # enable sleep when idling in hyprland
+        hyprpaper                       # wallpaper
 
         # Apps
         firefox                         # Web browser

@@ -1,0 +1,3 @@
+confs/system_modules/apps/software.nix
+confs/user_modules/apps/nvim.nix
+confs/user_modules/apps/software.nix

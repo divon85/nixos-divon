@@ -27,5 +27,6 @@
 
         # Utilities
         yazi
+        celluloid
     ];
 }
