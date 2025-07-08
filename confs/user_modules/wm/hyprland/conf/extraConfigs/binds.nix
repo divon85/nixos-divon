@@ -4,6 +4,7 @@
             # Example binds, see https://wiki.hyprland.org/Configuring/Binds/ for more
             bind = SUPER, RETURN, exec, alacritty                                                       # Open Alactritty
             bind = SUPER, Q, killactive                                                                 # Close current window
+            bind = SUPER CTRL, Q, exit                                                                  # Exit Hyprland
             bind = SUPER, L, exec, ~/.dotfiles/scripts/logout.sh                                        # Close current window
             bind = SUPER, C, exec, ~/.dotfiles/scripts/editor.sh                                        # Open text editor
             bind = SUPER ALT, E, exec, ~/.dotfiles/scripts/filemanager.sh                               # Opens the filemanager
