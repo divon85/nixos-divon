@@ -2,7 +2,8 @@
 
 ## Table of Contents
 [Introduction](#introduction)  
-[Versions changelog](#versions-changelogs)
+[Versions changelog](#versions-changelogs)  
+[Not yet implemented](#not-yet-implemented)
 
 ## Introduction
 This is the dotfiles for NixOS, installed apps are:
@@ -60,3 +61,8 @@ This is the dotfiles for NixOS, installed apps are:
 1. Fix the default editor to neovim
 2. Restructure the apps, remove fonts from system software.
 3. Fix the update method by copying all the files instead only the updated to avoid further errors.
+
+## Not yet Implemented
+1. Login screen
+2. Customized wlogout
+3. etc...
