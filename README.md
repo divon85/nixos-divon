@@ -1,5 +1,9 @@
 # My NixOS configuration
 
+## Table of Contents
+[Introduction](#introduction)  
+[Versions changelog](#versions-changelogs)
+
 ## Introduction
 This is the dotfiles for NixOS, installed apps are:
 1. System apps (available in confs/system_modules/apps/software.nix):
