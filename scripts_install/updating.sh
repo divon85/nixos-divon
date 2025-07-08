@@ -1,10 +1,13 @@
 ## Copy files
 ## Credit to MyLinux4Work
-echo "Fresh install to $SCRIPT_DIR"
-rsync -avhp -I \
-    --exclude-from="$INSTALLER_DIR/"excludes.txt \
-    --files-from="$INSTALLER_DIR/"includes.txt \
-    "$INSTALLER_DIR/." "$SCRIPT_DIR"
+echo "Copy files to $SCRIPT_DIR"
+if [ -f "$INSTALLER_DIR/"excludes.txt ]; then
+    rsync -avhp -I --exclude-from="$INSTALLER_DIR/"excludes.txt "$INSTALLER_DIR/." "$SCRIPT_DIR"
+else
+    echo "excludes.txt not found...!!! Aborting installation."
+    echo "Please redownload complete dotfiles from the repository."
+    exit 1
+fi
 
 ## Rebuild the system
 ## Credit to Librephoenix

@@ -55,3 +55,4 @@ This is the dotfiles for NixOS, installed apps are:
 ### v0.0.2
 1. Fix the default editor to neovim
 2. Restructure the apps, remove fonts from system software.
+3. Fix the update method by copying all the files instead only the updated to avoid further errors.

@@ -4,7 +4,9 @@ echo "Fresh install to $SCRIPT_DIR."
 if [ -f "$INSTALLER_DIR/"excludes.txt ]; then
     rsync -avhp -I --exclude-from="$INSTALLER_DIR/"excludes.txt "$INSTALLER_DIR/." "$SCRIPT_DIR"
 else
-    rsync -avhp -I "$INSTALLER_DIR/." "$SCRIPT_DIR"
+    echo "excludes.txt not found...!!! Aborting installation."
+    echo "Please redownload complete dotfiles from the repository."
+    exit 1
 fi
 
 ## Check bootloader

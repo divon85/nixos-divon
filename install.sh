@@ -25,6 +25,7 @@ if [ -d "$SCRIPT_DIR" ]; then
             exit 0
         else
             echo "Updating from version $installed_version to $installer_version."
+            source $INSTALLER_DIR/scripts_install/remove_old_dotfiles.sh
             source $INSTALLER_DIR/scripts_install/updating.sh
         fi
     else
