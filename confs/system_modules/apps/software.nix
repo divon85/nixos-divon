@@ -79,4 +79,6 @@
     programs.firefox.enable = true;
     programs.zsh.enable = true;
     programs.nix-ld.enable = true;
+    fonts.fontconfig.enable = true;
+
 }

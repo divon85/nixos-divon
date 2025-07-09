@@ -25,4 +25,6 @@
         liberation_ttf
         texlivePackages.japanese-otf
     ];
+
+    fonts.fontconfig.enable = true;
 }
