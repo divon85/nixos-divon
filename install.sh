@@ -32,10 +32,8 @@ if [ -d "$SCRIPT_DIR" ]; then
         echo "No version file found in $SCRIPT_DIR. Removing the directory."
         source $INSTALLER_DIR/scripts_install/remove_old_dotfiles.sh
         source $INSTALLER_DIR/scripts_install/fresh_install.sh
-        source $INSTALLER_DIR/scripts_install/updating.sh
     fi
 else
     echo "No installed dotfiles found in $SCRIPT_DIR. Starting fresh installation."
     source $INSTALLER_DIR/scripts_install/fresh_install.sh
-    source $INSTALLER_DIR/scripts_install/updating.sh
 fi
