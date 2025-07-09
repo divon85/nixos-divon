@@ -9,6 +9,14 @@ else
     exit 1
 fi
 
+## Copy hardware-configuration.nix
+if [ -f /etc/nixos/hardware-configuration.nix ]; then
+    echo "Copying hardware-configuration.nix to $SCRIPT_DIR"
+    cp /etc/nixos/hardware-configuration.nix "$SCRIPT_DIR/confs/system_modules/hardware-configuration.nix"
+else
+    echo "No hardware-configuration.nix found, skipping copy."
+fi
+
 ## Rebuild the system
 ## Credit to Librephoenix
 echo "Rebuilding the system with the new dotfiles"
