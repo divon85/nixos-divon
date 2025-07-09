@@ -39,14 +39,44 @@
         # Apps
         grimblast                                       # Screenshot tools
 
-
+        # Hyprland utils
+        waybar                                          # Status bar
+        rofi-wayland                                    # Application launcher
+        wl-clipboard                                    # Clipboard functionality
+        wlogout                                         # logout function
+        hyprlock                                        # lockscreen in hyprland
+        hypridle                                        # enable sleep when idling in hyprland
+        hyprpaper                                       # wallpaper
 
         # Programming Language
         libgcc                                          # C and C++
         julia                                           # Julia programming
         conda
+
+        # Utilities
+        celluloid
+        firefox                                         # Web browser
+        xfce.thunar                                     # GUI file manager
+        xfce.thunar-archive-plugin
+        xfce.thunar-volman
+        xfce.tumbler                                    # For Thunar thumbnails
+        ffmpegthumbnailer                               # For video thumbnails
+
+        # Fonts
+        noto-fonts-cjk-sans
+        noto-fonts-cjk-serif
+        noto-fonts-emoji
+        font-awesome
+        nerd-fonts.symbols-only
+        fira-sans
+        fira-code
+        fira-code-symbols
+        roboto
+        liberation_ttf
+        texlivePackages.japanese-otf
     ];
     
+    programs.firefox.enable = true;
     programs.zsh.enable = true;
     programs.nix-ld.enable = true;
 }
