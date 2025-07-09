@@ -15,6 +15,10 @@ let
         sysgc = "sudo nix-collect-garbage -d";
         homegc = "nix-collect-garbage -d";
         histc = "rm ~/.zsh_history";
+        mountd = "udisksctl mount -b /dev/nvme0n1p1";
+        unmountd = "udisksctl unmount -b /dev/nvme0n1p1";
+        mounte = "udisksctl mount -b /dev/nvme0n1p2";
+        unmounte = "udisksctl unmount -b /dev/nvme0n1p2";
     };
 
 in
