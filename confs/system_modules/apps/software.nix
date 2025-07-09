@@ -61,6 +61,7 @@
         xfce.thunar-volman
         xfce.tumbler                                    # For Thunar thumbnails
         ffmpegthumbnailer                               # For video thumbnails
+        evince
 
         # Fonts
         noto-fonts-cjk-sans
@@ -75,10 +76,4 @@
         liberation_ttf
         texlivePackages.japanese-otf
     ];
-    
-    programs.firefox.enable = true;
-    programs.zsh.enable = true;
-    programs.nix-ld.enable = true;
-    fonts.fontconfig.enable = true;
-
 }
