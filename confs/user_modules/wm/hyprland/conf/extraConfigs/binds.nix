@@ -15,7 +15,7 @@
             bind = SUPER, P, pseudo,                                                                    # dwindle
             bind = SUPER, J, togglesplit,                                                               # dwindle
             bind = SUPER, B, exec, ~/.dotfiles/scripts/browser.sh                                       # Opens the browser
-            bind = SUPER SHIFT, B, exec, ~/.dotfiles/scripts/reload-waybar.sh                           # Reload Waybar
+            bind = SUPER SHIFT, B, exec, ~/.dotfiles/scripts/mount_D.sh                           # Reload Waybar
             bind = SUPER, R, exec, retroarch
             binde = ALT,Tab,cyclenext
             binde = ALT,Tab,bringactivetotop
