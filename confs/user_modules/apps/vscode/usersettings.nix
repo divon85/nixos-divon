@@ -35,6 +35,7 @@
             "extensions.autoUpdate" = false;
             "telemetry.telemetryLevel" = "off";
             "explorer.confirmDragAndDrop" = false;
+            "vsicons.dontShowNewVersionMessage" = true;
         };
     };
 }
