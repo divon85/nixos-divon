@@ -1,6 +1,7 @@
 { inputs, pkgs, lib, options, systemSettings, userSettings, ... }: {
     imports = [
         ./hardware-configuration.nix
+        ./apps/programs.nix
         ./apps/software.nix
         ./apps/thunar.nix
         ./style/stylix.nix
