@@ -30,6 +30,7 @@
         zoxide                                          # Fuzzy finder for command history
         resvg                                           # SVG rendering library
         imagemagick                                     # Image manipulation
+        gum                                             # Enable options in shell scripts
 
 
         # File Manager

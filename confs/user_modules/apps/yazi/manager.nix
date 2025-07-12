@@ -4,8 +4,8 @@
             mgr = {
                 ratio = [
                     1
-                    4
-                    3
+                    2
+                    5
                 ];
                 sort_by = "natural";
                 sort_sensitive = true;

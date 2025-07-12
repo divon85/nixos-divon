@@ -2,6 +2,7 @@
     programs.yazi = {
         settings = {
             preview = {
+                wrap = "yes";
                 image_filter = "lanczos3";
                 image_quality = 90;
                 tab_size = 1;
