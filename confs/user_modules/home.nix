@@ -6,12 +6,12 @@
     programs.home-manager.enable = true;
 
     imports = [
-        ./apps/rofi/rofi.nix
-        ./apps/starship/starship.nix
-        ./apps/vscode/vscode.nix
-        ./apps/yazi/yazi.nix
-        ./apps/zsh/zsh.nix
-        ./apps/nvim.nix
+        ./apps/rofi/default.nix
+        ./apps/starship/default.nix
+        ./apps/vscode/default.nix
+        ./apps/yazi/default.nix
+        ./apps/zsh/default.nix
+        ./apps/nvim/default.nix
         ./apps/software.nix
         ./style/stylix.nix
         ./system/icons.nix

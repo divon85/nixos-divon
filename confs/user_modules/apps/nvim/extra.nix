@@ -1,7 +1,5 @@
 {
     programs.neovim = {
-        enable = true;
-        defaultEditor = true;
         extraConfig = ''
             set nocompatible            " disable compatibility to old-time vi
             set showmatch               " show matching 
