@@ -29,4 +29,16 @@
             };
         }
     ];
+
+    # List packages installed in system profile. To search, run:
+    # $ nix search wget
+    environment.systemPackages = with pkgs; [
+        waybar                                          # Status bar
+        rofi-wayland                                    # Application launcher
+        wl-clipboard                                    # Clipboard functionality
+        wlogout                                         # logout function
+        hyprlock                                        # lockscreen in hyprland
+        hypridle                                        # enable sleep when idling in hyprland
+        hyprpaper                                       # wallpaper
+    ];
 }
