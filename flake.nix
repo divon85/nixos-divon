@@ -34,7 +34,7 @@
         username = "igor";
         name = "Igor Novid";
         email = "igornovid@outlook.com";
-        wm = "hyprland";
+        wm = "hyprland"; # Choose between i3 and hyprland
         wmType = if ((wm == "hyprland") || (wm == "sway")) then "wayland" else "x11";
         dotfilesDir = "~/.dotfiles";
     };
