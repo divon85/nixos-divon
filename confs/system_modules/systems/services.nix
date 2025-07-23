@@ -10,9 +10,6 @@
         # Enable vscode-server
         vscode-server.enable = true;
 
-        # keyring
-        gnome.gnome-keyring.enable = true;
-
         # enable trash
         gvfs.enable = true;
 
