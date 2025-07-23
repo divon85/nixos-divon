@@ -9,7 +9,7 @@
         ./systems/networking.nix
         ./systems/services.nix
         ./systems/timezone.nix
-        (./. + "wm/"+userSettings.wm+".nix")
+        (./. + "/wm"+("/"+userSettings.wm)+".nix")
         inputs.home-manager.nixosModules.default
         inputs.vscode-server.nixosModules.default
         inputs.stylix.nixosModules.stylix
