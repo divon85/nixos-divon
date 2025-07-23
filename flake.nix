@@ -1,19 +1,17 @@
 {
-    description = "Divon NixOS Flakes";
+    description = "Divon Nixos Flakes";
 
     inputs = {
         nixpkgs.url = "github:nixos/nixpkgs/nixos-25.05";
-
-        hyprland.url = "github:hyprwm/Hyprland";
-
         home-manager = {
-            url = "github:nix-community/home-manager/release-25.05";
+            url = "github:nix-community/home-manager";
             inputs.nixpkgs.follows = "nixpkgs";
         };
-
-	    vscode-server.url = "github:nix-community/nixos-vscode-server";
-
-        stylix.url = "github:nix-community/stylix/release-25.05";
+        stylix = {
+            url = "github:nix-community/stylix";
+            inputs.nixpkgs.follows = "nixpkgs";
+        };
+        vscode-server.url = "github:nix-community/nixos-vscode-server";
     };
 
     outputs = inputs@{ self, ... }:
