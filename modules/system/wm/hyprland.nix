@@ -28,11 +28,8 @@
                 monospace-font-name = "Noto Sans Mono Medium 11";
             };
         }
-    ];
-
-    # List packages installed in system profile. To search, run:
-    # $ nix search wget
-    environment.systemPackages = with pkgs; [
+    ];environment.systemPackages = with pkgs; [
+        # Hyprland utils
         waybar                                          # Status bar
         rofi-wayland                                    # Application launcher
         wl-clipboard                                    # Clipboard functionality

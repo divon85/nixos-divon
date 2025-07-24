@@ -1,17 +1,19 @@
 {
-    description = "Divon Nixos Flakes";
+    description = "Divon NixOS Flakes";
 
     inputs = {
         nixpkgs.url = "github:nixos/nixpkgs/nixos-25.05";
+
+        hyprland.url = "github:hyprwm/Hyprland";
+
         home-manager = {
-            url = "github:nix-community/home-manager";
+            url = "github:nix-community/home-manager/release-25.05";
             inputs.nixpkgs.follows = "nixpkgs";
         };
-        stylix = {
-            url = "github:nix-community/stylix";
-            inputs.nixpkgs.follows = "nixpkgs";
-        };
-        vscode-server.url = "github:nix-community/nixos-vscode-server";
+
+	    vscode-server.url = "github:nix-community/nixos-vscode-server";
+
+        stylix.url = "github:nix-community/stylix/release-25.05";
     };
 
     outputs = inputs@{ self, ... }:
@@ -51,7 +53,7 @@
             nixhost = lib.nixosSystem {
                 system = systemSettings.architecture;
                 modules = [
-                    ./confs/system_modules/configuration.nix
+                    ./modules/system/configuration.nix
                     ];
                 specialArgs = {
                     inherit systemSettings;
@@ -65,7 +67,7 @@
             nixuser = inputs.home-manager.lib.homeManagerConfiguration {
                 inherit pkgs;
                 modules = [
-                    ./confs/user_modules/home.nix
+                    ./modules/user/home.nix
                 ];
                 extraSpecialArgs = {
                     inherit systemSettings;
